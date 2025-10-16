@@ -11,4 +11,7 @@ Hari ini, 9 Oktober 2025 Saya mempelajari
     <li>Membuat styling untuk selector ID about h2</li>
     <li>Membuat styling untuk selector ID about p</li>
     <li>Membuat styling untuk selector ID about elemen strong</li>
+    <li>Membuat styling untuk selector ID contact menggunakan css</li>
+    <li>Membuat styling untuk selector ID contact form</li>
+    <li>Membuat styling untuk selector ID contact label</li>
 </ol>
