@@ -14,5 +14,6 @@ Hari ini, 22 Oktober 2025 Saya mempelajari
     <li>Saya belajar sendiri cara membuat bg header menjadi transparan</li>
     <li>Menambahkan hover di bagian li>a</li>
     <li>Membuat styling home</li>
+    <li>Saya belajar menambahkan div class di bagian home</li>
     <li>Membuat styling footer</li>
 </ol>
