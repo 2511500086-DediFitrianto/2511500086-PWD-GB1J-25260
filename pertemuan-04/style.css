@@ -129,6 +129,12 @@ header li a:active {
     margin-bottom: 10px;
 }
 
+@media (max-width:600px) {
+    .rowr {
+        width: 50%;
+    }
+}
+
  #about {
     background-color: #ffffff;
     border-radius: 10px;
