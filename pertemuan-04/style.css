@@ -131,7 +131,16 @@ header li a:active {
 
 @media (max-width:600px) {
     .rowr {
-        width: 50%;
+        padding-left: 10px;
+    }
+
+    img {
+        padding-right: 80px;
+    }
+
+    #home p {
+        font-size: 20px;
+        padding-left: 0;
     }
 }
 
