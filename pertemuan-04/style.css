@@ -131,7 +131,9 @@ header li a:active {
 
 @media (max-width:600px) {
     .rowr {
-        padding-left: 10px;
+        display: contents;
+        justify-content: center;
+        gap: 0;
     }
 
     img {
