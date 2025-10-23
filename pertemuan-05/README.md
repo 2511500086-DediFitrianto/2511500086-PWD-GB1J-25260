@@ -11,4 +11,5 @@ Hari ini Kamis, 23 Oktober 2025 Saya mempelajari
     <li>Memunculkan button hamburger di tampilan android</li>
     <li>Styling nav versi mobile</li>
     <li>Styling nav active</li>
+    <li>Menambahkan file script js dan menyambungkan ke html</li>
 </ol>
