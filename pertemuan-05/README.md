@@ -7,4 +7,5 @@ Hari ini Kamis, 23 Oktober 2025 Saya mempelajari
 <ol>
     <li>Mencopy otomatis file index dan css di terminal</li>
     <li>Membuat icon hamburger</li>
+    <li>Menghilangkan button toggle di tampilan desktop</li>
 </ol>
