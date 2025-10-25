@@ -13,4 +13,5 @@ Hari ini Kamis, 23 Oktober 2025 Saya mempelajari
     <li>Styling nav active</li>
     <li>Menambahkan file script js dan menyambungkan ke html</li>
     <li>Menambahka kodingan script js untuk memunculkan nav</li>
+    <li>rowr</li>
 </ol>
