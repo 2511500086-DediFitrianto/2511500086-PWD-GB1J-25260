@@ -14,4 +14,5 @@ Hari ini Kamis, 23 Oktober 2025 Saya mempelajari
     <li>Menambahkan file script js dan menyambungkan ke html</li>
     <li>Menambahka kodingan script js untuk memunculkan nav</li>
     <li>styling javascript memberikan peringatan untuk mencegah form terkirirm</li>
+    <li>Menambahkan javacript untuk memberikan peringatan kepada pengguna karena tidak mengisi form / tidak sesuai form</li>
 </ol>
