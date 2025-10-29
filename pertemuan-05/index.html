@@ -24,7 +24,7 @@
     <section id="home">
         <h2>Selamat datang</h2>
         <div class="rowr">
-        <p>Haiiiiii!! Kenalin namaku Dedifitrianto</p>
+        <p>Halo! Selamat datang di halaman saya!</p>
         <img src="char.png" alt="Gambar contoh" width="300">
         </div>
     </section>
@@ -43,15 +43,16 @@
         <h2>Kontak Saye</h2>
         <form action="" method="GET">
             <label for="txtNama"><span>Nama:</span>
-            <input type="text" id="txtNama" name="txtNama" placeholder="Your Name" required autocomplete="name">
+            <input type="text" id="txtNama" name="txtNama" placeholder="Your Name">
             </label>
 
             <label for="txtEmail"><span>Email:</span>
-            <input type="email" id="txtEmail" name="txtEmail" placeholder="example@gmail.com" required autocomplete="email">
+                <input type="email" id="txtEmail" name="txtEmail" placeholder="example@gmail.com">
             </label>
-
-            <label for="txtPesan"><span>Pesan:</span>
-            <textarea name="txtPesan" id="txtPesan" placeholder="Tulis pesan anda..." required></textarea>
+            
+            <label for="txtPesan"><span>Pesan Anda:</span>
+                <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+                <small id="charCount">0/200 karakter</small>
             </label>
 
             <button type="submit">Kirim &check;</button>
