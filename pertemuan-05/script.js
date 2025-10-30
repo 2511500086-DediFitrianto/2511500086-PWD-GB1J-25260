@@ -69,10 +69,7 @@ function showError(inputElement, message) {
     small.style.flexBasis = "100%";
     small.dataset.forId = inputElement.id;
 
-    const wrapper = label.querySelector('[data-wrapper="pesan-wrapper"]');
-    if (wrapper && wrapper.contains(inputElement)) {
-        wrapper.insertBefore(small, charCount)
-    } if (inputElement.nextSibling) {
+    if (inputElement.nextSibling) {
        label.insertBefore(small, inputElement.nextSibling);
     } else {
        label.appendChild(small);
