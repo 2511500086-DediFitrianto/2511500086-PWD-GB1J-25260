@@ -16,18 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 document.querySelector("form").addEventListener("submit", function (e) {
-    const nama = document.getElementById("txtNama").value.trim();
-    const email = document.getElementById("txtEmail").value.trim();
-    const pesan = document.getElementById("txtPesan").value.trim();
-    if (nama === "" || email === "" || pesan === "") {
-        alert("Semua kolom wajib diisi!");
-        e.preventDefault();
-    } else {
-        alert("Terima kasih, " + nama + "! Pesan Anda telah dikirim.");
-    }
-    });
-
-document.querySelector("form").addEventListener("submit", function (e) {
     const nama = document.getElementById("txtNama");
     const email = document.getElementById("txtEmail");
     const pesan = document.getElementById("txtPesan");
@@ -67,13 +55,13 @@ document.querySelector("form").addEventListener("submit", function (e) {
 function showError(inputElement, message) {
     const label = inputElement.closest("label");
     if (!label) return;
-
+    
     label.style.flexWrap = "wrap";
-
+    
     const small = document.createElement("small");
     small.className = "error-msg";
     small.textContent = message;
-
+    
     small.style.color = "red";
     small.style.fontSize = "14px";
     small.style.display = "block";
@@ -81,23 +69,26 @@ function showError(inputElement, message) {
     small.style.flexBasis = "100%";
     small.dataset.forId = inputElement.id;
 
-    if (inputElement.nextSibling) {
-        label.insertBefore(small, inputElement.nextSibling);
+    const wrapper = label.querySelector('[data-wrapper="pesan-wrapper"]');
+    if (wrapper && wrapper.contains(inputElement)) {
+        wrapper.insertBefore(small, charCount)
+    } if (inputElement.nextSibling) {
+       label.insertBefore(small, inputElement.nextSibling);
     } else {
-        label.appendChild(small);
+       label.appendChild(small);
     }
 
     inputElement.style.border = "1px solid red";
-    
+
     alignErrorMessage(small, inputElement);
 }
 
 function alignErrorMessage(smallEl, inputEl) {
-    const isMobile = window.matchMedia("(max-width: 600px)").matches;
+   const isMobile = window.matchMedia("(max-width: 600px)").matches;
     if (isMobile) {
-        smallEl.style.marginLeft = "0";
-        smallEl.style.width = "100%";
-        return;
+       smallEl.style.marginLeft = "0";
+       smallEl.style.width = "100%";
+       return;
     }
 
     const label = inputEl.closest("label");
@@ -112,11 +103,24 @@ function alignErrorMessage(smallEl, inputEl) {
 }
 
 window.addEventListener("resize", () => {
-    document.querySelectorAll(".error-msg").forEach(small => {
-        const target = document.getElementById(small.dataset.forId);
-        if (target) alignErrorMessage(small, target);
-    });
+   document.querySelectorAll(".error-msg").forEach(small => {
+       const target = document.getElementById(small.dataset.forId);
+       if (target) alignErrorMessage(small, target);
+   });
 });
+
+document.querySelector("form").addEventListener("submit", function (e) {
+    const nama = document.getElementById("txtNama").value.trim();
+    const email = document.getElementById("txtEmail").value.trim();
+    const pesan = document.getElementById("txtPesan").value.trim();
+    if (nama === "" || email === "" || pesan === "") {
+        alert("Semua kolom wajib diisi!");
+        e.preventDefault();
+    } else {
+        alert("Terima kasih, " + nama + "! Pesan Anda telah dikirim.");
+    }
+    });
+
 
 document.getElementById("txtPesan").addEventListener("input", function () {
     const maxLength = 200;
