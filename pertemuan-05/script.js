@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     homeSection.appendChild(ucapan);
     });
 
-
 function showError(inputElement, message) {
     const label = inputElement.closest("label");
     if (!label) return;
