@@ -74,7 +74,7 @@
             $NAMAADIK = "Tidak Punya";
             $Namaadik = "";
         ?> 
-        <h2>Tentang Kami</h2>
+        <h2>Tentang Dedi</h2>
         <p>
             <strong>NIM:</strong>
             <?php
@@ -93,48 +93,13 @@
                 echo $tempatlahir;
             ?> &copy;
         </p>
-        <p>
-            <strong>Tanggal Lahir:</strong>
-            <?php
-                echo $tanggallahir;
-            ?>
-        </p>
-        <p>
-            <strong>Hobby:</strong>
-            <?php
-                echo $hoby;
-            ?> &#128516;
-        </p>
-        <p>
-            <strong>Pasangan:</strong>
-            <?php
-                echo $pasangan;
-            ?> &#9786;
-            </p>
-        <p>
-            <strong>Pekerjaan:</strong>
-            <?php
-                echo $pekerjaan;
-            ?> &quot; &#9786; &quot;
-            </p>
-        <p>
-            <strong>Nama Ortu:</strong>
-            <?php
-                echo $namaortu;
-            ?>
-        </p>
-        <p>
-            <strong>Nama Kakak:</strong>
-            <?php
-                echo $namakakak;
-            ?>    
-        </p>
-        <p>
-            <strong>Nama Adik:</strong>
-            <?php
-                echo $namaadik;
-            ?>
-        </p>
+        <p><strong>Tanggal Lahir:</strong> 24 Oktober 2006</p>
+        <p><strong>Hobby:</strong> Desain &#128516;</p>
+        <p><strong>Pasangan:</strong> Sudah ada &#9786;</p>
+        <p><strong>Pekerjaan:</strong> Desainer &quot; &#9786; &quot;</p>
+        <p><strong>Nama Ortu:</strong> Bapak Asri dan Ibuk Pidiatun </p>
+        <p><strong>Nama Kakak:</strong> Nurita Evitarina</p>
+        <p><strong>Nama Adik:</strong> Tidak Punya </p>
     </section>
     <section id="contact">
         <h2>Kontak Saye</h2>
