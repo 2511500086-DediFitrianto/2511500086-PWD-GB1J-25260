@@ -1,0 +1,206 @@
+document.getElementById("menuToggle").addEventListener("click", function () {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+    if (nav.classList.contains("active")) {
+        this.textContent = "\u2716";
+    } else {
+        this.textContent = "\u2630";
+    }
+    });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const homeSection = document.getElementById("home");
+    const ucapan = document.createElement("p");
+    ucapan.textContent = "Haiiiiii!! Kenalin namaku Dedifitrianto";
+    homeSection.appendChild(ucapan);
+    });
+
+function showError(inputElement, message) {
+    const label = inputElement.closest("label");
+    if (!label) return;
+    
+    label.style.flexWrap = "wrap";
+    
+    const small = document.createElement("small");
+    small.className = "error-msg";
+    small.textContent = message;
+    
+    small.style.color = "red";
+    small.style.fontSize = "14px";
+    small.style.display = "block";
+    small.style.marginTop = "4px";
+    small.style.flexBasis = "100%";
+    small.dataset.forId = inputElement.id;
+
+    const wrapper = label.querySelector('[data-wrapper="pesan-wrapper"]');
+    if (wrapper && wrapper.contains(inputElement)) {
+        wrapper.insertBefore(small, charCount)
+    } if (inputElement.nextSibling) {
+       label.insertBefore(small, inputElement.nextSibling);
+    } else {
+       label.appendChild(small);
+    }
+
+    inputElement.style.border = "1px solid red";
+
+    alignErrorMessage(small, inputElement);
+}
+
+document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nama = document.getElementById("txtNama");
+    const email = document.getElementById("txtEmail");
+    const pesan = document.getElementById("txtPesan");
+
+    document.querySelectorAll(".error-msg").forEach(el => el.remove());
+    [nama, email, pesan].forEach(el => el.style.border = "");
+
+    let isValid = true;
+
+    const namaValue = nama.value.trim();
+    if (namaValue.length < 3) {
+        showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
+        isValid = false;
+    } else if (!/^[A-Za-z\s]+$/.test(namaValue)) {
+        showError(nama, "Nama hanya boleh berisi huruf dan spasi.");
+        isValid = false;
+    }
+
+    const emailValue = email.value.trim();
+    if (emailValue === "") {
+        showError(email, "Email wajib diisi.");
+        isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
+        showError(email, "Format email tidak valid. Contoh: nama@gmail.com");
+        isValid = false;
+    }
+
+    const pesanValue = pesan.value.trim();
+    if (pesanValue.length < 10) {
+        showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert(`Terima kasih, ${namaValue}!\nPesan Anda telah dikirim.`);
+        e.target.reset();
+    }
+});
+
+function alignErrorMessage(smallEl, inputEl) {
+   const isMobile = window.matchMedia("(max-width: 600px)").matches;
+    if (isMobile) {
+       smallEl.style.marginLeft = "0";
+       smallEl.style.width = "100%";
+       return;
+    }
+
+    const label = inputEl.closest("label");
+    if (!label) return;
+
+    const rectLabel = label.getBoundingClientRect();
+    const rectInput = inputEl.getBoundingClientRect();
+    const offsetLeft = Math.max(0, Math.round(rectInput.left - rectLabel.left));
+
+    smallEl.style.marginLeft = offsetLeft + "px";
+    smallEl.style.width = Math.round(rectInput.width) + "px";
+}
+
+window.addEventListener("resize", () => {
+   document.querySelectorAll(".error-msg").forEach(small => {
+       const target = document.getElementById(small.dataset.forId);
+       if (target) alignErrorMessage(small, target);
+   });
+});
+
+document.getElementById("txtPesan").addEventListener("input", function () {
+    const maxLength = 200;
+    const panjang = this.value.length;
+    if (panjang > maxLength) {
+        this.value = this.value.substring(0, maxLength);
+    }
+    document.getElementById("charCount").textContent = panjang + "/200 karakter";
+    this.value.length + "/" + maxLength + " karakter";
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    function setupCharCountLayout() {
+        const label = document.querySelector('label[for="txtPesan"]');
+        if (!label) return;
+    
+        let wrapper = label.querySelector('[data-wrapper="pesan-wrapper"]');
+        const span = label.querySelector('span');
+        const textarea = document.getElementById('txtPesan');
+        const counter = document.getElementById('charCount');
+        if (!span || !textarea || !counter) return;
+
+        if (!wrapper) {
+            wrapper = document.createElement('div');
+            wrapper.dataset.wrapper = 'pesan-wrapper';
+            wrapper.style.width = '100%';
+            wrapper.style.flex = '1';
+            wrapper.style.display = 'flex';
+            wrapper.style.flexDirection = 'column';
+
+            label.insertBefore(wrapper, textarea);
+            wrapper.appendChild(textarea);
+            wrapper.appendChild(counter);
+
+            textarea.style.width = '100%';
+            textarea.style.boxSizing = 'border-box';
+            counter.style.color = '#ffffffff';
+            counter.style.fontSize = '14px';
+            counter.style.marginTop = '4px';
+        }
+
+        applyResponsiveLayout();
+    }
+    function applyResponsiveLayout() {
+        const label = document.querySelector('label[for="txtPesan"]');
+        const span = label?.querySelector('span');
+        const wrapper = label?.querySelector('[data-wrapper="pesan-wrapper"]');
+        const counter = document.getElementById('charCount');
+        if (!label || !span || !wrapper || !counter) return;
+        
+        const isMobile = window.matchMedia('(max-width: 600px)').matches;
+
+        if (isMobile) {
+            label.style.display = 'flex';
+            label.style.flexDirection = 'column';
+            label.style.alignItems = 'flex-start';
+            label.style.width = '100%';
+
+            span.style.minWidth = 'auto';
+            span.style.textAlign = 'left';
+            span.style.paddingRight = '0';
+            span.style.flexShrink = '0';
+            span.style.marginBottom = '4px';
+
+            wrapper.style.flex = '1';
+            wrapper.style.display = 'flex';
+            wrapper.style.flexDirection = 'column';
+            counter.style.alignSelf = 'flex-end';
+            counter.style.width = 'auto';
+            } else {
+            label.style.display = 'flex';
+            label.style.flexDirection = 'row';
+            label.style.alignItems = 'baseline';
+            label.style.width = '100%';
+
+            span.style.minWidth = '180px';
+            span.style.textAlign = 'right';
+            span.style.paddingRight = '16px';
+            span.style.flexShrink = '0';
+            span.style.marginBottom = '0';
+
+            wrapper.style.flex = '1';
+            wrapper.style.display = 'flex';
+            wrapper.style.flexDirection = 'column';
+            counter.style.alignSelf = 'flex-end';
+            counter.style.width = 'auto';
+            }
+        }
+        setupCharCountLayout();
+        window.addEventListener('resize', applyResponsiveLayout);
+});
