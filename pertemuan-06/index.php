@@ -26,21 +26,115 @@
         <div class="rowr">
             <p>Halo! Selamat datang di halaman saya!</p>
             <img src="char.png" alt="Gambar contoh" width="300">
-            <?php
-            echo "Halo Dunia!";
-            ?>
         </div>
+            <?php
+            echo "Halo Dunia!<br>";
+            echo "Nama saya Dedi";
+            ?>
     </section>
     <section id="about">
-        <h2>Tentang Dedi</h2>
-        <p><strong>NIM:</strong> 2511500086</p>
-        <p><strong>Nama:</strong> Dedi Fitrianto &#168512;</p>
-        <p><strong>Tempat Lahir:</strong> Pangkalpinang &copy;</p>
-        <p><strong>Tanggal Lahir:</strong> 24 Oktober 2006</p>
-        <p><strong>Alamat:</strong> Jl.Sungaiselan</p>
-        <p><strong>Hobby:</strong> Desain &#128516;</p>
-        <p><strong>Pekerjaan:</strong> Desainer &quot; &#9786; &quot;</p>
-        <p><strong>Nama Kakak:</strong> Nurita Evitarina</p>
+        <?php
+            $nim = "0344300002";
+            $NIM = "2511500086";
+            $Nim = "";
+
+            $nama = "Yohanes Setiawan Japiardi";
+            $NAMA = "Dedi Fitrianto";
+            $Nama = "";
+
+            $tempatlahir = "Pangkalpinang";
+            $TEMPATLAHIR = "PANGKALPINANG";
+            $Tempatlahir = "";
+
+            $tanggallahir = "1 Januari 2000";
+            $TANGGALLAHIR = "24 Oktober 2006";
+            $Tanggallahir = "";
+
+            $hoby = "Memasak, coding, dan bermain musik";
+            $HOBY = "Desain";
+            $Hoby = "";
+
+            $pasangan = "Belum ada";
+            $PASANGAN = "Sudah ada";
+            $Pasangan = "";
+
+            $pekerjaan = "Dosen ISB Atma Luhur";
+            $PEKERJAAN = "Desainer";
+            $Pekerjaan = "";
+
+            $namaortu = "Bapak Setiawan dan Ibu Maria";
+            $NAMAORTU = "Bapak Asri dan Ibuk Pidiatun";
+            $Namaortu = "";
+
+            $namakakak = "Antonius Setiawan";
+            $NAMAKAKAK = "Nurita Evitarina";
+            $Namakakak = "";
+
+            $namaadik = "Christina Setiawan";
+            $NAMAADIK = "Tidak Punya";
+            $Namaadik = "";
+        ?> 
+        <h2>Tentang Kami</h2>
+        <p>
+            <strong>NIM:</strong>
+            <?php
+                echo $nim;
+            ?>
+        </p>
+        <p>
+            <strong>Nama:</strong>
+            <?php
+                echo $nama;
+            ?> &#168512;
+        </p>
+        <p>
+            <strong>Tempat Lahir:</strong>
+            <?php
+                echo $tempatlahir;
+            ?> &copy;
+        </p>
+        <p>
+            <strong>Tanggal Lahir:</strong>
+            <?php
+                echo $tanggallahir;
+            ?>
+        </p>
+        <p>
+            <strong>Hobby:</strong>
+            <?php
+                echo $hoby;
+            ?> &#128516;
+        </p>
+        <p>
+            <strong>Pasangan:</strong>
+            <?php
+                echo $pasangan;
+            ?> &#9786;
+            </p>
+        <p>
+            <strong>Pekerjaan:</strong>
+            <?php
+                echo $pekerjaan;
+            ?> &quot; &#9786; &quot;
+            </p>
+        <p>
+            <strong>Nama Ortu:</strong>
+            <?php
+                echo $namaortu;
+            ?>
+        </p>
+        <p>
+            <strong>Nama Kakak:</strong>
+            <?php
+                echo $namakakak;
+            ?>    
+        </p>
+        <p>
+            <strong>Nama Adik:</strong>
+            <?php
+                echo $namaadik;
+            ?>
+        </p>
     </section>
     <section id="contact">
         <h2>Kontak Saye</h2>

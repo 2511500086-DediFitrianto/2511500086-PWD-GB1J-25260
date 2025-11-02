@@ -7,4 +7,5 @@ Hari ini Kamis, 30 Oktober 2025 Saya mempelajari
 <ol>
     <li>Script php hello world</li>
     <li>Copy index.html, style.css, script.jss (pertemuan-06)</li>
+    <li>Membuat skrip php nim</li>
 </ol>
