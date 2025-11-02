@@ -100,8 +100,13 @@
             ?>
         </p>
         <p>
-            <strong>Hobby:</strong> Desain &#128516;</p>
-        <p><strong>Pasangan:</strong> Sudah ada &#9786;</p>
+            <strong>Hobby:</strong>
+            <?php
+                echo $hoby;
+            ?> &#128516;
+        </p>
+        <p>
+            <strong>Pasangan:</strong> Sudah ada &#9786;</p>
         <p><strong>Pekerjaan:</strong> Desainer &quot; &#9786; &quot;</p>
         <p><strong>Nama Ortu:</strong> Bapak Asri dan Ibuk Pidiatun </p>
         <p><strong>Nama Kakak:</strong> Nurita Evitarina</p>
