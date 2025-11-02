@@ -112,8 +112,13 @@
             ?> &#9786;
             </p>
         <p>
-            <strong>Pekerjaan:</strong> Desainer &quot; &#9786; &quot;</p>
-        <p><strong>Nama Ortu:</strong> Bapak Asri dan Ibuk Pidiatun </p>
+            <strong>Pekerjaan:</strong>
+            <?php
+                echo $pekerjaan;
+            ?> &quot; &#9786; &quot;
+            </p>
+        <p>
+            <strong>Nama Ortu:</strong> Bapak Asri dan Ibuk Pidiatun </p>
         <p><strong>Nama Kakak:</strong> Nurita Evitarina</p>
         <p><strong>Nama Adik:</strong> Tidak Punya </p>
     </section>
