@@ -118,8 +118,13 @@
             ?> &quot; &#9786; &quot;
             </p>
         <p>
-            <strong>Nama Ortu:</strong> Bapak Asri dan Ibuk Pidiatun </p>
-        <p><strong>Nama Kakak:</strong> Nurita Evitarina</p>
+            <strong>Nama Ortu:</strong>
+            <?php
+                echo $namaortu;
+            ?>
+        </p>
+        <p>
+            <strong>Nama Kakak:</strong> Nurita Evitarina</p>
         <p><strong>Nama Adik:</strong> Tidak Punya </p>
     </section>
     <section id="contact">
