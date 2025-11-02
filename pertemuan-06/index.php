@@ -74,7 +74,7 @@
             $NAMAADIK = "Tidak Punya";
             $Namaadik = "";
         ?> 
-        <h2>Tentang Dedi</h2>
+        <h2>Tentang Kami</h2>
         <p>
             <strong>NIM:</strong>
             <?php
@@ -110,7 +110,7 @@
             <?php
                 echo $pasangan;
             ?> &#9786;
-            </p>
+        </p>
         <p>
             <strong>Pekerjaan:</strong>
             <?php
@@ -131,7 +131,10 @@
         </p>
         <p>
             <strong>Nama Adik:</strong>
-             Tidak Punya </p>
+            <?php
+                echo $namaadik;
+            ?>
+        </p>
     </section>
     <section id="contact">
         <h2>Kontak Saye</h2>
