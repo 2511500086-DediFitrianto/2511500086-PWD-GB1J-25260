@@ -11,4 +11,5 @@ Hari ini Kamis, 30 Oktober 2025 Saya mempelajari
     <li>Membuat skrip php tempat lahir</li>
     <li>Membuat skrip php tanggal lahir</li>
     <li>Membuat skrip php hoby</li>
+    <li>Membuat skrip php pasangan</li>
 </ol>

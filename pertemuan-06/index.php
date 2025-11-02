@@ -106,8 +106,13 @@
             ?> &#128516;
         </p>
         <p>
-            <strong>Pasangan:</strong> Sudah ada &#9786;</p>
-        <p><strong>Pekerjaan:</strong> Desainer &quot; &#9786; &quot;</p>
+            <strong>Pasangan:</strong>
+            <?php
+                echo $pasangan;
+            ?> &#9786;
+            </p>
+        <p>
+            <strong>Pekerjaan:</strong> Desainer &quot; &#9786; &quot;</p>
         <p><strong>Nama Ortu:</strong> Bapak Asri dan Ibuk Pidiatun </p>
         <p><strong>Nama Kakak:</strong> Nurita Evitarina</p>
         <p><strong>Nama Adik:</strong> Tidak Punya </p>
