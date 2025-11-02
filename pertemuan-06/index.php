@@ -124,8 +124,14 @@
             ?>
         </p>
         <p>
-            <strong>Nama Kakak:</strong> Nurita Evitarina</p>
-        <p><strong>Nama Adik:</strong> Tidak Punya </p>
+            <strong>Nama Kakak:</strong>
+            <?php
+                echo $namakakak;
+            ?>    
+        </p>
+        <p>
+            <strong>Nama Adik:</strong>
+             Tidak Punya </p>
     </section>
     <section id="contact">
         <h2>Kontak Saye</h2>
