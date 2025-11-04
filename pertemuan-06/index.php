@@ -425,6 +425,33 @@
         <p><strong>Angka Mutu:</strong> <?php echo $mutu3; ?></p>
         <p><strong>Bobot:</strong> <?php echo $bobot3; ?></p>
         <p><strong>Status:</strong> <?php echo $status3; ?></p>
+
+        <h3>Matakuliah 4</h3>
+        <p><strong>Nama Matkul4:</strong> <?php echo $namamatkul4; ?></p>
+        <p><strong>SKS:</strong> <?php echo $sksmatkul4; ?></p>
+        <p><strong>Nilai Hadir:</strong> <?php echo $nilaihadir4; ?></p>
+        <p><strong>Tugas:</strong> <?php echo $nilaitugas4; ?></p>
+        <p><strong>UTS:</strong> <?php echo $nilaiuts4; ?></p>
+        <p><strong>UAS:</strong> <?php echo $nilaiuas4; ?></p>
+        <p><strong>Nilai Akhir:</strong> <?php echo $nilaiAkhir4; ?></p>
+        <p><strong>Grade:</strong> <?php echo $grade4; ?></p>
+        <p><strong>Angka Mutu:</strong> <?php echo $mutu4; ?></p>
+        <p><strong>Bobot:</strong> <?php echo $bobot4; ?></p>
+        <p><strong>Status:</strong> <?php echo $status4; ?></p>
+
+        <h3>Matakuliah 5</h3>
+        <p><strong>Nama Matkul5:</strong> <?php echo $namamatkul5; ?></p>
+        <p><strong>SKS:</strong> <?php echo $sksmatkul5; ?></p>
+        <p><strong>Nilai Hadir:</strong> <?php echo $nilaihadir5; ?></p>
+        <p><strong>Tugas:</strong> <?php echo $nilaitugas5; ?></p>
+        <p><strong>UTS:</strong> <?php echo $nilaiuts5; ?></p>
+        <p><strong>UAS:</strong> <?php echo $nilaiuas5; ?></p>
+        <p><strong>Nilai Akhir:</strong> <?php echo $nilaiAkhir5; ?></p>
+        <p><strong>Grade:</strong> <?php echo $grade5; ?></p>
+        <p><strong>Angka Mutu:</strong> <?php echo $mutu5; ?></p>
+        <p><strong>Bobot:</strong> <?php echo $bobot5; ?></p>
+        <p><strong>Status:</strong> <?php echo $status5; ?></p>
+        
     <section id="contact">
         <h2>Kontak Saye</h2>
         <form action="" method="GET">
