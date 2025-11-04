@@ -25,4 +25,5 @@ Hari ini Kamis, 30 Oktober 2025 Saya mempelajari
     <li>Membuat H3 matkul 1</li>
     <li>Mencopy H3 matkul 1 dan merubah isi dalamnya saja</li>
     <li>Styling css section id IPK</li>
+    <li>Memisahkan tugas agar bapak yohanes mudah melihat hasilnya, hheheheheh</li>
 </ol>
