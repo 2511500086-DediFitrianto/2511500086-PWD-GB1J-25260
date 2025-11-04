@@ -85,7 +85,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     if (isValid) {
         alert(`Terima kasih, ${namaValue}!\nPesan Anda telah dikirim.`);
         e.target.reset();
-    }
+    } 
 });
 
 function alignErrorMessage(smallEl, inputEl) {

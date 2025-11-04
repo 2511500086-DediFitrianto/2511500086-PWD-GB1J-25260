@@ -32,45 +32,48 @@
             echo "Nama saya Dedi";
             ?>
     </section>
+    <section id="IPK">
+        
+    </section>
     <section id="about">
         <?php
-            $nim = "0344300002";
+            $nim = "2511500049";
             $NIM = "2511500086";
             $Nim = "";
 
-            $nama = "Yohanes Setiawan Japiardi";
+            $nama = "Muhammad Zaky Syanov ziad";
             $NAMA = "Dedi Fitrianto";
             $Nama = "";
 
-            $tempatlahir = "Pangkalpinang";
+            $tempatlahir = "Serang Banten";
             $TEMPATLAHIR = "PANGKALPINANG";
             $Tempatlahir = "";
 
-            $tanggallahir = "1 Januari 2000";
+            $tanggallahir = "11 November 2005";
             $TANGGALLAHIR = "24 Oktober 2006";
             $Tanggallahir = "";
 
-            $hoby = "Memasak, coding, dan bermain musik";
+            $hoby = "Ngegame";
             $HOBY = "Desain";
             $Hoby = "";
 
-            $pasangan = "Belum ada";
+            $pasangan = "Sudah punya banyak";
             $PASANGAN = "Sudah ada";
             $Pasangan = "";
 
-            $pekerjaan = "Dosen ISB Atma Luhur";
+            $pekerjaan = "Ngocok";
             $PEKERJAAN = "Desainer";
             $Pekerjaan = "";
 
-            $namaortu = "Bapak Setiawan dan Ibu Maria";
+            $namaortu = "Bapak Ilhamdi";
             $NAMAORTU = "Bapak Asri dan Ibuk Pidiatun";
             $Namaortu = "";
 
-            $namakakak = "Antonius Setiawan";
+            $namakakak = "Tidak ada";
             $NAMAKAKAK = "Nurita Evitarina";
             $Namakakak = "";
 
-            $namaadik = "Christina Setiawan";
+            $namaadik = "Aqil";
             $NAMAADIK = "Tidak Punya";
             $Namaadik = "";
         ?> 
