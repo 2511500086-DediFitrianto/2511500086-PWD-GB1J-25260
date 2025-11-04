@@ -22,4 +22,5 @@ Hari ini Kamis, 30 Oktober 2025 Saya mempelajari
     <li>Membuat variabel nilai</li>
     <li>Menambahkan perintah Lulus dan Gagal kalau semisalnya ipk lebih/kurang dari 1.00</li>
     <li>Menambahkan variabel nilai bobot</li>
+    <li>Membuat H3 matkul 1</li>
 </ol>

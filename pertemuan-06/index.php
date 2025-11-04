@@ -384,6 +384,34 @@
         $totalsks= $sksmatkul1 + $sksmatkul2 + $sksmatkul3 + $sksmatkul4 + $sksmatkul5;
         $ipk= $totalbobot/$totalsks;
         ?>
+
+        <h2>Nilai Saye</h2>
+
+        <h3>Matakuliah1</h3>
+        <p><strong>Nama Matkul1:</strong> <?php echo $namamatkul1; ?></p>
+        <p><strong>SKS:</strong> <?php echo $sksmatkul1; ?></p>
+        <p><strong>Nilai Hadir:</strong> <?php echo $nilaihadir1; ?></p>
+        <p><strong>Tugas:</strong> <?php echo $nilaitugas1; ?></p>
+        <p><strong>UTS:</strong> <?php echo $nilaiuts1; ?></p>
+        <p><strong>UAS:</strong> <?php echo $nilaiuas1; ?></p>
+        <p><strong>Nilai Akhir:</strong> <?php echo $nilaiAkhir1; ?></p>
+        <p><strong>Grade:</strong> <?php echo $grade1; ?></p>
+        <p><strong>Angka Mutu:</strong> <?php echo $mutu1; ?></p>
+        <p><strong>Bobot:</strong> <?php echo $bobot1; ?></p>
+        <p><strong>Status:</strong> <?php echo $status1; ?></p>
+
+        <h3>Matakuliah2</h3>
+        <p><strong>Nama Matkul2:</strong> <?php echo $namamatkul2; ?></p>
+        <p><strong>SKS:</strong> <?php echo $sksmatkul2; ?></p>
+        <p><strong>Nilai Hadir:</strong> <?php echo $nilaihadir2; ?></p>
+        <p><strong>Tugas:</strong> <?php echo $nilaitugas2; ?></p>
+        <p><strong>UTS:</strong> <?php echo $nilaiuts2; ?></p>
+        <p><strong>UAS:</strong> <?php echo $nilaiuas2; ?></p>
+        <p><strong>Nilai Akhir:</strong> <?php echo $nilaiAkhir1; ?></p>
+        <p><strong>Grade:</strong> <?php echo $grade1; ?></p>
+        <p><strong>Angka Mutu:</strong> <?php echo $mutu1; ?></p>
+        <p><strong>Bobot:</strong> <?php echo $bobot1; ?></p>
+        <p><strong>Status:</strong> <?php echo $status1; ?></p>
     <section id="contact">
         <h2>Kontak Saye</h2>
         <form action="" method="GET">
