@@ -387,7 +387,7 @@
 
         <h2>Nilai Saye</h2>
 
-        <h3>Matakuliah1</h3>
+        <h3>Matakuliah 1</h3>
         <p><strong>Nama Matkul1:</strong> <?php echo $namamatkul1; ?></p>
         <p><strong>SKS:</strong> <?php echo $sksmatkul1; ?></p>
         <p><strong>Nilai Hadir:</strong> <?php echo $nilaihadir1; ?></p>
@@ -400,18 +400,31 @@
         <p><strong>Bobot:</strong> <?php echo $bobot1; ?></p>
         <p><strong>Status:</strong> <?php echo $status1; ?></p>
 
-        <h3>Matakuliah2</h3>
+        <h3>Matakuliah 2</h3>
         <p><strong>Nama Matkul2:</strong> <?php echo $namamatkul2; ?></p>
         <p><strong>SKS:</strong> <?php echo $sksmatkul2; ?></p>
         <p><strong>Nilai Hadir:</strong> <?php echo $nilaihadir2; ?></p>
         <p><strong>Tugas:</strong> <?php echo $nilaitugas2; ?></p>
         <p><strong>UTS:</strong> <?php echo $nilaiuts2; ?></p>
         <p><strong>UAS:</strong> <?php echo $nilaiuas2; ?></p>
-        <p><strong>Nilai Akhir:</strong> <?php echo $nilaiAkhir1; ?></p>
-        <p><strong>Grade:</strong> <?php echo $grade1; ?></p>
-        <p><strong>Angka Mutu:</strong> <?php echo $mutu1; ?></p>
-        <p><strong>Bobot:</strong> <?php echo $bobot1; ?></p>
-        <p><strong>Status:</strong> <?php echo $status1; ?></p>
+        <p><strong>Nilai Akhir:</strong> <?php echo $nilaiAkhir2; ?></p>
+        <p><strong>Grade:</strong> <?php echo $grade2; ?></p>
+        <p><strong>Angka Mutu:</strong> <?php echo $mutu2; ?></p>
+        <p><strong>Bobot:</strong> <?php echo $bobot2; ?></p>
+        <p><strong>Status:</strong> <?php echo $status2; ?></p>
+
+        <h3>Matakuliah 3</h3>
+        <p><strong>Nama Matkul3:</strong> <?php echo $namamatkul3; ?></p>
+        <p><strong>SKS:</strong> <?php echo $sksmatkul3; ?></p>
+        <p><strong>Nilai Hadir:</strong> <?php echo $nilaihadir3; ?></p>
+        <p><strong>Tugas:</strong> <?php echo $nilaitugas3; ?></p>
+        <p><strong>UTS:</strong> <?php echo $nilaiuts3; ?></p>
+        <p><strong>UAS:</strong> <?php echo $nilaiuas3; ?></p>
+        <p><strong>Nilai Akhir:</strong> <?php echo $nilaiAkhir3; ?></p>
+        <p><strong>Grade:</strong> <?php echo $grade3; ?></p>
+        <p><strong>Angka Mutu:</strong> <?php echo $mutu3; ?></p>
+        <p><strong>Bobot:</strong> <?php echo $bobot3; ?></p>
+        <p><strong>Status:</strong> <?php echo $status3; ?></p>
     <section id="contact">
         <h2>Kontak Saye</h2>
         <form action="" method="GET">
