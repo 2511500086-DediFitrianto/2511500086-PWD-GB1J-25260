@@ -45,6 +45,11 @@
         var_dump($aktif);
         echo "\nArray:\n";
         var_dump($hobi);
+        echo "\nObject:\n";
+        var_dump($mahasiswa);
+        echo "\nNULL:\n";
+        var_dump($nilai_akhir);
+        echo "</pre>";
         ?>
     </body>
 </html>
