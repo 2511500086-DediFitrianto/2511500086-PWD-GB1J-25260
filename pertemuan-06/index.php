@@ -32,6 +32,111 @@
             echo "Nama saya Dedi";
             ?>
     </section>
+    </section>
+    <section id="about">
+        <?php
+            $nim = "2511500049";
+            $NIM = "2511500086";
+            $Nim = "";
+
+            $nama = "Muhammad Zaky Syanov ziad";
+            $NAMA = "Dedi Fitrianto";
+            $Nama = "";
+
+            $tempatlahir = "Serang Banten";
+            $TEMPATLAHIR = "PANGKALPINANG";
+            $Tempatlahir = "";
+
+            $tanggallahir = "11 November 2005";
+            $TANGGALLAHIR = "24 Oktober 2006";
+            $Tanggallahir = "";
+
+            $hoby = "Ngegame";
+            $HOBY = "Desain";
+            $Hoby = "";
+
+            $pasangan = "Sudah punya banyak";
+            $PASANGAN = "Sudah ada";
+            $Pasangan = "";
+
+            $pekerjaan = "Menjaga";
+            $PEKERJAAN = "Desainer";
+            $Pekerjaan = "";
+
+            $namaortu = "Bapak Ilhamdi";
+            $NAMAORTU = "Bapak Asri dan Ibuk Pidiatun";
+            $Namaortu = "";
+
+            $namakakak = "Tidak ada";
+            $NAMAKAKAK = "Nurita Evitarina";
+            $Namakakak = "";
+
+            $namaadik = "Aqil";
+            $NAMAADIK = "Tidak Punya";
+            $Namaadik = "";
+        ?> 
+        <h2>Tentang Kami</h2>
+        <p>
+            <strong>NIM:</strong>
+            <?php
+                echo $nim;
+            ?>
+        </p>
+        <p>
+            <strong>Nama:</strong>
+            <?php
+                echo $nama;
+            ?> &#168512;
+        </p>
+        <p>
+            <strong>Tempat Lahir:</strong>
+            <?php
+                echo $tempatlahir;
+            ?> &copy;
+        </p>
+        <p>
+            <strong>Tanggal Lahir:</strong>
+            <?php
+                echo $tanggallahir;
+            ?>
+        </p>
+        <p>
+            <strong>Hobby:</strong>
+            <?php
+                echo $hoby;
+            ?> &#128516;
+        </p>
+        <p>
+            <strong>Pasangan:</strong>
+            <?php
+                echo $pasangan;
+            ?> &#9786;
+        </p>
+        <p>
+            <strong>Pekerjaan:</strong>
+            <?php
+                echo $pekerjaan;
+            ?> &quot; &#9786; &quot;
+            </p>
+        <p>
+            <strong>Nama Ortu:</strong>
+            <?php
+                echo $namaortu;
+            ?>
+        </p>
+        <p>
+            <strong>Nama Kakak:</strong>
+            <?php
+                echo $namakakak;
+            ?>    
+        </p>
+        <p>
+            <strong>Nama Adik:</strong>
+            <?php
+                echo $namaadik;
+            ?>
+        </p>
+    </section>
     <section id="IPK">
         <?php 
             $namamatkul1='Aplikasi Perkantoran';
@@ -127,112 +232,158 @@
                 $status1="Gagal";
             }
         }
+
+        if ($nilaihadir2 < 70){ 
+            $grade2="E";
+            $mutu2="0.00";
+            $status2="Gagal";
+        } else {
+            if ($nilaiAkhir2>=91){
+                $grade2="A";
+                $mutu2=4.00;
+                $status2="Lulus";
+            } elseif 
+                ($nilaiAkhir2>=81){
+                $grade2="A-";
+                $mutu2=3.70;
+                $status2="Lulus";
+            } elseif 
+                ($nilaiAkhir2>=76){
+                $grade2="B+";
+                $mutu2=3.30;
+                $status2="Lulus";
+            } elseif 
+                ($nilaiAkhir2>=71){
+                $grade2="B";
+                $mutu2=3.00;
+                $status2="Lulus";
+            } elseif 
+                ($nilaiAkhir2>=66){
+                $grade2="B-";
+                $mutu2=2.70;
+                $status2="Lulus";
+            } elseif 
+                ($nilaiAkhir2>=61){
+                $grade2="C+";
+                $mutu2=2.30;
+                $status2="Lulus";
+            } elseif 
+                ($nilaiAkhir2>=56){
+                $grade2="C";
+                $mutu2=2.00;
+                $status2="Lulus";
+            } elseif 
+                ($nilaiAkhir2>=51){
+                $grade2="C-";
+                $mutu2=1.70;
+                $status2="Lulus";
+            } elseif 
+                ($nilaiAkhir2>=36){
+                $grade2="D";
+                $mutu2=1.00;
+                $status2="Gagal";
+            } elseif 
+                ($nilaiAkhir2>=0){
+                $grade2="E";
+                $mutu2=0.00;
+                $status2="Gagal";
+            }
+        }
+
+                if ($nilaihadir3 < 70){ 
+            $grade3 = "E";
+            $mutu3 = 0.00;
+            $status3 = "Gagal";
+        } else {
+            if ($nilaiAkhir3 >= 91) {
+                $grade3 = "A"; $mutu3 = 4.00; $status3 = "Lulus";
+            } elseif ($nilaiAkhir3 >= 81) {
+                $grade3 = "A-"; $mutu3 = 3.70; $status3 = "Lulus";
+            } elseif ($nilaiAkhir3 >= 76) {
+                $grade3 = "B+"; $mutu3 = 3.30; $status3 = "Lulus";
+            } elseif ($nilaiAkhir3 >= 71) {
+                $grade3 = "B"; $mutu3 = 3.00; $status3 = "Lulus";
+            } elseif ($nilaiAkhir3 >= 66) {
+                $grade3 = "B-"; $mutu3 = 2.70; $status3 = "Lulus";
+            } elseif ($nilaiAkhir3 >= 61) {
+                $grade3 = "C+"; $mutu3 = 2.30; $status3 = "Lulus";
+            } elseif ($nilaiAkhir3 >= 56) {
+                $grade3 = "C"; $mutu3 = 2.00; $status3 = "Lulus";
+            } elseif ($nilaiAkhir3 >= 51) {
+                $grade3 = "C-"; $mutu3 = 1.70; $status3 = "Lulus";
+            } elseif ($nilaiAkhir3 >= 36) {
+                $grade3 = "D"; $mutu3 = 1.00; $status3 = "Gagal";
+            } elseif 
+                    ($nilaiAkhir3>= 0) { $grade3 = "E"; $mutu3 = 0.00; $status3 = "Gagal";
+            }
+        }
+
+        if ($nilaihadir4 < 70){ 
+            $grade4 = "E";
+            $mutu4 = 0.00;
+            $status4 = "Gagal";
+        } else {
+            if ($nilaiAkhir4 >= 91) {
+                $grade4 = "A"; $mutu4 = 4.00; $status4 = "Lulus";
+            } elseif ($nilaiAkhir4 >= 81) {
+                $grade4 = "A-"; $mutu4 = 3.70; $status4 = "Lulus";
+            } elseif ($nilaiAkhir4 >= 76) {
+                $grade4 = "B+"; $mutu4 = 3.30; $status4 = "Lulus";
+            } elseif ($nilaiAkhir4 >= 71) {
+                $grade4 = "B"; $mutu4 = 3.00; $status4 = "Lulus";
+            } elseif ($nilaiAkhir4 >= 66) {
+                $grade4 = "B-"; $mutu4 = 2.70; $status4 = "Lulus";
+            } elseif ($nilaiAkhir4 >= 61) {
+                $grade4 = "C+"; $mutu4 = 2.30; $status4 = "Lulus";
+            } elseif ($nilaiAkhir4 >= 56) {
+                $grade4 = "C"; $mutu4 = 2.00; $status4 = "Lulus";
+            } elseif ($nilaiAkhir4 >= 51) {
+                $grade4 = "C-"; $mutu4 = 1.70; $status4 = "Lulus";
+            } elseif ($nilaiAkhir4 >= 36) {
+                $grade4 = "D"; $mutu4 = 1.00; $status4 = "Gagal";
+            } elseif ($nilaiAkhir4>=0) {
+                $grade4 = "E"; $mutu4 = 0.00; $status4 = "Gagal";
+            }
+        }
+
+        if ($nilaihadir5 < 70){ 
+            $grade5 = "E";
+            $mutu5 = 0.00;
+            $status5 = "Gagal";
+        } else {
+            if ($nilaiAkhir5 >= 91) {
+                $grade5 = "A"; $mutu5 = 4.00; $status5 = "Lulus";
+            } elseif ($nilaiAkhir5 >= 81) {
+                $grade5 = "A-"; $mutu5 = 3.70; $status5 = "Lulus";
+            } elseif ($nilaiAkhir5 >= 76) {
+                $grade5 = "B+"; $mutu5 = 3.30; $status5 = "Lulus";
+            } elseif ($nilaiAkhir5 >= 71) {
+                $grade5 = "B"; $mutu5 = 3.00; $status5 = "Lulus";
+            } elseif ($nilaiAkhir5 >= 66) {
+                $grade5 = "B-"; $mutu5 = 2.70; $status5 = "Lulus";
+            } elseif ($nilaiAkhir5 >= 61) {
+                $grade5 = "C+"; $mutu5 = 2.30; $status5 = "Lulus";
+            } elseif ($nilaiAkhir5 >= 56) {
+                $grade5 = "C"; $mutu5 = 2.00; $status5 = "Lulus";
+            } elseif ($nilaiAkhir5 >= 51) {
+                $grade5 = "C-"; $mutu5 = 1.70; $status5 = "Lulus";
+            } elseif ($nilaiAkhir5 >= 36) {
+                $grade5 = "D"; $mutu5 = 1.00; $status5 = "Gagal";
+            } elseif ($nilaiAkhir5>= 0) {
+                $grade5 = "E"; $mutu5 = 0.00; $status5 = "Gagal";
+            }
+        }
+
+        $bobot1=$mutu1 * $sksmatkul1;
+        $bobot2=$mutu2 * $sksmatkul2;
+        $bobot3=$mutu3 * $sksmatkul3;
+        $bobot4=$mutu4 * $sksmatkul4;
+        $bobot5=$mutu5 * $sksmatkul5;
+
+        $totalbobot= $bobot1 + $bobot2 + $bobot3 + $bobot4 + $bobot5;  
+        $totalsks= $sksmatkul1 + $sksmatkul2 + $sksmatkul3 + $sksmatkul4 + $sksmatkul5;
+        $ipk= $totalbobot/$totalsks;
         ?>
-    </section>
-    <section id="about">
-        <?php
-            $nim = "2511500049";
-            $NIM = "2511500086";
-            $Nim = "";
-
-            $nama = "Muhammad Zaky Syanov ziad";
-            $NAMA = "Dedi Fitrianto";
-            $Nama = "";
-
-            $tempatlahir = "Serang Banten";
-            $TEMPATLAHIR = "PANGKALPINANG";
-            $Tempatlahir = "";
-
-            $tanggallahir = "11 November 2005";
-            $TANGGALLAHIR = "24 Oktober 2006";
-            $Tanggallahir = "";
-
-            $hoby = "Ngegame";
-            $HOBY = "Desain";
-            $Hoby = "";
-
-            $pasangan = "Sudah punya banyak";
-            $PASANGAN = "Sudah ada";
-            $Pasangan = "";
-
-            $pekerjaan = "Menjaga Kasur";
-            $PEKERJAAN = "Desainer";
-            $Pekerjaan = "";
-
-            $namaortu = "Bapak Ilhamdi";
-            $NAMAORTU = "Bapak Asri dan Ibuk Pidiatun";
-            $Namaortu = "";
-
-            $namakakak = "Tidak ada";
-            $NAMAKAKAK = "Nurita Evitarina";
-            $Namakakak = "";
-
-            $namaadik = "Aqil";
-            $NAMAADIK = "Tidak Punya";
-            $Namaadik = "";
-        ?> 
-        <h2>Tentang Kami</h2>
-        <p>
-            <strong>NIM:</strong>
-            <?php
-                echo $nim;
-            ?>
-        </p>
-        <p>
-            <strong>Nama:</strong>
-            <?php
-                echo $nama;
-            ?> &#168512;
-        </p>
-        <p>
-            <strong>Tempat Lahir:</strong>
-            <?php
-                echo $tempatlahir;
-            ?> &copy;
-        </p>
-        <p>
-            <strong>Tanggal Lahir:</strong>
-            <?php
-                echo $tanggallahir;
-            ?>
-        </p>
-        <p>
-            <strong>Hobby:</strong>
-            <?php
-                echo $hoby;
-            ?> &#128516;
-        </p>
-        <p>
-            <strong>Pasangan:</strong>
-            <?php
-                echo $pasangan;
-            ?> &#9786;
-        </p>
-        <p>
-            <strong>Pekerjaan:</strong>
-            <?php
-                echo $pekerjaan;
-            ?> &quot; &#9786; &quot;
-            </p>
-        <p>
-            <strong>Nama Ortu:</strong>
-            <?php
-                echo $namaortu;
-            ?>
-        </p>
-        <p>
-            <strong>Nama Kakak:</strong>
-            <?php
-                echo $namakakak;
-            ?>    
-        </p>
-        <p>
-            <strong>Nama Adik:</strong>
-            <?php
-                echo $namaadik;
-            ?>
-        </p>
-    </section>
     <section id="contact">
         <h2>Kontak Saye</h2>
         <form action="" method="GET">
