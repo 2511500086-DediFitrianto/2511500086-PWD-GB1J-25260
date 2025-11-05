@@ -152,18 +152,18 @@
         $nilaiuts2='60';
         $nilaiuas2='80';
             $namamatkul3='Kalkulus';
-        $sksmatkul3='3';
-        $nilaihadir3='80';
-        $nilaitugas3='70';
-        $nilaiuts3='70';
-        $nilaiuas3='90';
+        $sksmatkul3='6';
+        $nilaihadir3='90';
+        $nilaitugas3='90';
+        $nilaiuts3='75';
+        $nilaiuas3='71';
             $namamatkul4='Logika Informatika';
-        $sksmatkul4='3';
-        $nilaihadir4='100';
-        $nilaitugas4='90';
+        $sksmatkul4='5';
+        $nilaihadir4='81';
+        $nilaitugas4='91';
         $nilaiuts4='75';
         $nilaiuas4='80';
-         $namamatkul5='Pemrograman Web Dasar';
+            $namamatkul5='Pemrograman Web Dasar';
         $sksmatkul5='3';
         $nilaihadir5='69';
         $nilaitugas5='80';
@@ -543,7 +543,7 @@
         <p><strong>Total Bobot:</strong> <?php echo $totalbobot; ?></p>
         <p><strong>Total SKS:</strong> <?php echo $totalsks; ?></p>
         <p><strong>IPK:</strong> <?php echo number_format($ipk, 2); ?></p>
-        
+
     <section id="contact">
         <h2>Kontak Saye</h2>
         <form action="" method="GET">
