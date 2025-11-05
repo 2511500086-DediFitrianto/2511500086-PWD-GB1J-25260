@@ -59,12 +59,12 @@
             $PASANGAN = "Sudah ada";
             $Pasangan = "";
 
-            $pekerjaan = "Menjaga";
+            $pekerjaan = "Menjaga Tempat Tidur";
             $PEKERJAAN = "Desainer";
             $Pekerjaan = "";
 
-            $namaortu = "Bapak Ilhamdi";
-            $NAMAORTU = "Bapak Asri dan Ibuk Pidiatun";
+            $namaortu = "Bapak Ilhamdi dan Ibuk";
+            $NAMAORTU = "Bapak Asri dan Ibuk";
             $Namaortu = "";
 
             $namakakak = "Tidak ada";
@@ -152,13 +152,13 @@
         $nilaiuts2='60';
         $nilaiuas2='80';
             $namamatkul3='Kalkulus';
-        $sksmatkul3='6';
+        $sksmatkul3='3';
         $nilaihadir3='90';
         $nilaitugas3='90';
         $nilaiuts3='75';
         $nilaiuas3='71';
             $namamatkul4='Logika Informatika';
-        $sksmatkul4='5';
+        $sksmatkul4='3';
         $nilaihadir4='81';
         $nilaitugas4='91';
         $nilaiuts4='75';
@@ -543,6 +543,7 @@
         <p><strong>Total Bobot:</strong> <?php echo $totalbobot; ?></p>
         <p><strong>Total SKS:</strong> <?php echo $totalsks; ?></p>
         <p><strong>IPK:</strong> <?php echo number_format($ipk, 2); ?></p>
+    </section>
 
     <section id="contact">
         <h2>Kontak Saye</h2>

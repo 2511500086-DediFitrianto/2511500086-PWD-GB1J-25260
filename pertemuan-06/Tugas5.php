@@ -33,7 +33,7 @@
             $PASANGAN = "Sudah ada";
             $Pasangan = "";
 
-            $pekerjaan = "Menjaga";
+            $pekerjaan = "Menjaga Tempat Tidur";
             $PEKERJAAN = "Desainer";
             $Pekerjaan = "";
 
