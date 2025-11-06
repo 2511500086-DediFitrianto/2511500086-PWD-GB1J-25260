@@ -11,4 +11,6 @@ Hari ini Kamis, 6 November 2025 Saya mempelajari
 <li>Membuat tombol kirim bisa menjadi next ke page lain</li>
 <li>Menyimpan nilai dari input </li>
 <li>Membuat sesion di prses.php dan index.php</li>
+<li>Redirect di index.php</li>
+<li>Menampilkan session dari proses.php ke index.php</li>
 </ol>
