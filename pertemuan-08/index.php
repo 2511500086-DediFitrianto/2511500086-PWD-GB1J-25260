@@ -79,6 +79,18 @@ endif;
           <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Apa Pekerjaan anda?" required autocomplete="name">
         </label>
 
+        <label for="txtOrtu"><span>Nama Ortu:</span>
+          <input type="text" id="txtOrtu" name="txtOrtu" placeholder="Siapa nama Ortu anda?" required autocomplete="name">
+        </label>
+
+        <label for="txtNamakakak"><span>Nama Kakak:</span>
+          <input type="text" id="txtNamakakak" name="txtNamakakak" placeholder="Apa Pekerjaan anda?" required autocomplete="name">
+        </label>
+
+        <label for="txtNamaadik"><span>Nama Adik:</span>
+          <input type="text" id="txtNamaadik" name="txtNamaadik" placeholder="Apa Pekerjaan anda?" required autocomplete="name">
+        </label>
+
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
     </section>
