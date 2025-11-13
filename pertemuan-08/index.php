@@ -52,7 +52,8 @@ endif;
       <p>Ini contoh paragraf HTML.</p>
     </section>
     <section id = "biodata">
-    
+    <h2>Biodata Sederhana Mahasiswa</h2>
+        </form>
     </section>
 
     <section id="about">
