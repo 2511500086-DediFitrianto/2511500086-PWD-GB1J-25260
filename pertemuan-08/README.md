@@ -12,4 +12,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Membuat section baru yaitu section biodata</li>
   <li>Membuat Judul Biodata Sederhana Mahasiswa</li>
   <li>Membuat form di section biodata sederhana mahasiswa</li>
+  <li>Membuat label dan input nim</li>
 </ol>
