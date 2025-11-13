@@ -21,7 +21,7 @@ endif;
 $sesnim = $_SESSION["sesNim"] ?? "";
 $sesnama = $_SESSION["txtNamalengkap"] ?? "";
 $sestempatlahir = $_SESSION["txtTempatlahir"] ?? "";
-$sestanggallahir = $_SESSION["txtTanggallahir"] ?? "";
+$sestanggal = $_SESSION["txtTanggal"] ?? "";
 $seshobi = $_SESSION["txtHobi"] ?? "";
 $sespasangan = $_SESSION["txtPasangan"] ?? "";
 $sespekerjaan = $_SESSION["txtPekerjaan"] ?? "";
@@ -68,16 +68,20 @@ $sesnamaadik = $_SESSION["txtNamaadik"] ?? "";
     <h2>Biodata Sederhana Mahasiswa</h2>
         <form action="proses.php" method="POST">
 
-        <label for="txtNama"><span>NIM:</span>
+        <label for="txtNim"><span>NIM:</span>
           <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required autocomplete="name">
         </label>
 
         <label for="txtNamalengkap"><span>Nama Lengkap:</span>
-          <input type="text" id="txtNamalengkap" name="txtNim" placeholder="Nama Lengkap Anda" required autocomplete="name">
+          <input type="text" id="txtNamalengkap" name="txtNamalengkap" placeholder="Nama Lengkap Anda" required autocomplete="name">
         </label>
 
         <label for="txtTempatlahir"><span>Tempat Lahir:</span>
           <input type="text" id="txtTempatlahir" name="txtTempatlahir" placeholder="Tempat Lahir" required autocomplete="name">
+        </label>
+
+        <label for="txtTanggal"><span>Tanggal Lahir:</span>
+          <input type="text" id="txtTanggal" name="txtTanggal" placeholder="Tanggal Lahir" required autocomplete="name">
         </label>
 
         <label for="txtHobi"><span>Hobi:</span>
@@ -85,7 +89,7 @@ $sesnamaadik = $_SESSION["txtNamaadik"] ?? "";
         </label>
 
         <label for="txtPasangan"><span>Pasangan:</span>
-          <input type="text" id="txtpasangan" name="txtpasangan" placeholder="Siapa Pasangan anda?" required autocomplete="name">
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Siapa Pasangan anda?" required autocomplete="name">
         </label>
 
         <label for="txtPekerjaan"><span>Pekerjaan:</span>
@@ -151,24 +155,16 @@ $sesnamaadik = $_SESSION["txtNamaadik"] ?? "";
       $Namaadik = "";
 ?>
       <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong>
-        <?php
-        echo $NIM;
-        ?>
-      </p>
-      <p><strong>Nama Lengkap:</strong>
-        <?php
-        echo $Nama;
-        ?> &#128526;
-      </p>
-      <p><strong>Tempat Lahir:</strong> <?php echo $tempatlahir; ?></p>
-      <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
-      <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
-      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-      <p><strong>Pekerjaan:</strong> Dosen di ISB Atma Luhur &copy; 2025</p>
-      <p><strong>Nama Orang Tua:</strong> Bapak Setiawan dan Ibu Maria</p>
-      <p><strong>Nama Kakak:</strong> Antonius Setiawan</p>
-      <p><strong>Nama Adik:</strong> <?php echo $sespesan ?></p>
+      <p><strong>NIM:</strong><?php echo $sesnim?> </p>
+      <p><strong>Nama Lengkap:</strong><?php echo $sesnama?></p>
+      <p><strong>Tempat Lahir:</strong><?php echo $sestempatlahir?></p>
+      <p><strong>Tanggal Lahir:</strong> <?php echo $sestanggal?></p>
+      <p><strong>Hobi:</strong><?php echo $seshobi?></p>
+      <p><strong>Pasangan:</strong> <?php echo $sespasangan ?></p>
+      <p><strong>Pekerjaan:</strong><?php echo $sespekerjaan?></p>
+      <p><strong>Nama Orang Tua:</strong> <?php echo $sesnamaortu?></p>
+      <p><strong>Nama Kakak:</strong> <?php echo $sesnamakakak?></p>
+      <p><strong>Nama Adik:</strong> <?php echo $sesnamaadik?></p>
     </section>
 
     <section id="contact">

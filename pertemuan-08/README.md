@@ -23,4 +23,6 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Membuat variabel biodata</li>
   <li>Membuat $SESSION di semua biodata di proses.php</li>
   <li>Menyambungkan sesion dan variabel ke index.php</li>
+  <li>Menambahkan php di sectionabout</li>
+  <li>Menambahkan kodingan eror, dan memberkan style.css, serta merubah sedikit di javacsript<li>
 </ol>

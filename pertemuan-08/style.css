@@ -50,6 +50,7 @@ header li a:active {
 }
 
 #home:target~header nav a[href="#home"],
+#biodata:target~header nav a[href="biodata"]
 #about:target~header nav a[href="#about"],
 #contact:target~header nav a[href="#contact"] {
   background: #fff;
@@ -60,6 +61,7 @@ header li a:active {
 }
 
 #home,
+#biodata,
 #about,
 #contact {
   background-color: #ffffff;
@@ -71,6 +73,7 @@ header li a:active {
 }
 
 #home h2,
+#biodata h2,
 #about h2,
 #contact h2 {
   color: #003366;
@@ -85,6 +88,7 @@ header li a:active {
 }
 
 #about p,
+#biodata label,
 #contact label {
   display: flex;
   justify-content: flex-start;
@@ -95,6 +99,7 @@ header li a:active {
 }
 
 #about strong,
+#biodata label>span,
 #contact label>span {
   min-width: 180px;
   color: #003366;
@@ -105,6 +110,8 @@ header li a:active {
 }
 
 #contact input,
+#biodata input,
+#biodata textarea,
 #contact textarea {
   flex: 1;
   border: 1px solid #ccc;
@@ -116,6 +123,7 @@ header li a:active {
   box-sizing: border-box;
 }
 
+#bidata button,
 #contact button {
   margin-top: 10px;
   display: inline-block;
@@ -128,12 +136,14 @@ header li a:active {
   margin-right: 8px;
 }
 
+#biodata button[type="submit"],
 #contact button[type="submit"] {
   background-color: #003366;
   color: #fff;
   font-weight: 600;
 }
 
+#biodata button[type="reset"],
 #contact button[type="reset"] {
   background-color: #b4b4b4;
   color: #272727;
