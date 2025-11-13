@@ -9,4 +9,5 @@ Hari ini Kamis, 13 November 2025 Saya mempelajari
     <li>Membuat codingan php txtnama</li>
     <li>Menambahkan form action</li>
     <li>Mengganti reset menjadi submit di javascript</li>
+    <li>Membuat variabel form di get_proses.php</li>
    
