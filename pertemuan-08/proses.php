@@ -10,6 +10,16 @@ $sespekerjaan = $_POST["txtPekerjaan"];
 $sesnamaortu = $_POST["txtOrtu"];
 $sesnamakakak = $_POST["txtNamakakak"];
 $sesnamaadik = $_POST["txtNamaadik"];
-$_SESSION["sesnim"] = $sesnim;
-header("Location: index.html")
+$_SESSION["sesNim"] = $sesnim;
+$_SESSION["txtNamalengkap"] = $sesnama;
+$_SESSION["txtTempatlahir"] = $sestempatlahir;
+$_SESSION["txtTanggallahir"] = $sestanggallahir;
+$_SESSION["txtHobi"] = $seshobi;
+$_SESSION["txtPasangan"] = $sespasangan;
+$_SESSION["txtPekerjaan"] = $sespekerjaan;
+$_SESSION["txtOrtu"] = $sesnamaortu;
+$_SESSION["txtNamakakak"] = $sesnamakakak;
+$_SESSION["txtNamaadik"] = $sesnamaadik;
+header("Location: index.html");
+exit();
 ?>

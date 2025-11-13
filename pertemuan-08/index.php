@@ -101,12 +101,46 @@ $sesnim = $_SESSION["sesnim"] ?? "";
 
     <section id="about">
       <?php
-      $nim = 2511500010;
-      $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
-      $Nama = 'Al\'kautar Benyamin';
-      $tempat = "Jebus";
-      ?>
+      $nim = "2511500049";
+      $NIM = "2511500086";
+      $Nim = "";
+
+      $nama = "Muhammad Zaky Syanov ziad";
+      $NAMA = "Dedi Fitrianto";
+      $Nama = "";
+
+      $tempatlahir = "Serang Banten";
+      $TEMPATLAHIR = "PANGKALPINANG";
+      $Tempatlahir = "";
+
+      $tanggallahir = "11 November 2005";
+      $TANGGALLAHIR = "24 Oktober 2006";
+      $Tanggallahir = "";
+
+      $hoby = "Ngegame";
+      $HOBY = "Desain";
+      $Hoby = "";
+
+      $pasangan = "Sudah punya banyak";
+      $PASANGAN = "Sudah ada";
+      $Pasangan = "";
+
+      $pekerjaan = "Menjaga Tempat Tidur";
+      $PEKERJAAN = "Desainer";
+      $Pekerjaan = "";
+
+      $namaortu = "Bapak Ilhamdi dan Ibuk";
+      $NAMAORTU = "Bapak Asri dan Ibuk";
+      $Namaortu = "";
+
+      $namakakak = "Tidak ada";
+      $NAMAKAKAK = "Nurita Evitarina";
+      $Namakakak = "";
+
+      $namaadik = "Aqil";
+      $NAMAADIK = "Tidak Punya";
+      $Namaadik = "";
+?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>
         <?php
