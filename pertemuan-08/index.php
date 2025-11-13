@@ -58,7 +58,10 @@ endif;
         <label for="txtNama"><span>NIM:</span>
           <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required autocomplete="name">
         </label>
-        </form>
+
+        <label for="txtNama"><span>Nama Lengkap:</span>
+          <input type="text" id="txtNamalengkap" name="txtNim" placeholder="Masukkan Nama Lengkap" required autocomplete="name">
+        </label>
     </section>
 
     <section id="about">
