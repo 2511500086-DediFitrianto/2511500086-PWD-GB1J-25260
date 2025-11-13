@@ -22,4 +22,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Membuat $SESNIM pada proses.php dan header ke index.php.</li>
   <li>Membuat variabel biodata</li>
   <li>Membuat $SESSION di semua biodata di proses.php</li>
+  <li>Menyambungkan sesion dan variabel ke index.php</li>
 </ol>

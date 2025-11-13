@@ -18,7 +18,16 @@ endif;
 ?>
 
 <?php
-$sesnim = $_SESSION["sesnim"] ?? "";
+$sesnim = $_SESSION["sesNim"] ?? "";
+$sesnama = $_SESSION["txtNamalengkap"] ?? "";
+$sestempatlahir = $_SESSION["txtTempatlahir"] ?? "";
+$sestanggallahir = $_SESSION["txtTanggallahir"] ?? "";
+$seshobi = $_SESSION["txtHobi"] ?? "";
+$sespasangan = $_SESSION["txtPasangan"] ?? "";
+$sespekerjaan = $_SESSION["txtPekerjaan"] ?? "";
+$sesnamaortu = $_SESSION["txtOrtu"] ?? "";
+$sesnamakakak = $_SESSION["txtNamakakak"] ?? "";
+$sesnamaadik = $_SESSION["txtNamaadik"] ?? "";
 ?>
 
 <!DOCTYPE html>
@@ -152,7 +161,7 @@ $sesnim = $_SESSION["sesnim"] ?? "";
         echo $Nama;
         ?> &#128526;
       </p>
-      <p><strong>Tempat Lahir:</strong> <?php echo $tempat; ?></p>
+      <p><strong>Tempat Lahir:</strong> <?php echo $tempatlahir; ?></p>
       <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
       <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
       <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
@@ -167,15 +176,15 @@ $sesnim = $_SESSION["sesnim"] ?? "";
       <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama">
         </label>
 
         <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email">
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." ></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
 
