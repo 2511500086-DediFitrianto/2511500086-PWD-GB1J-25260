@@ -14,4 +14,6 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Membuat form di section biodata sederhana mahasiswa</li>
   <li>Membuat label dan input nim</li>
   <li>Membuat label dan input nama lengkap</li>
+  <li>Membuat label dan input tempat lahir</li>
+  <li>Membuat label dan input Tanggal lahir dan hobi</li>
 </ol>

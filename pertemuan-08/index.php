@@ -60,8 +60,17 @@ endif;
         </label>
 
         <label for="txtNama"><span>Nama Lengkap:</span>
-          <input type="text" id="txtNamalengkap" name="txtNim" placeholder="Masukkan Nama Lengkap" required autocomplete="name">
+          <input type="text" id="txtNamalengkap" name="txtNim" placeholder="Nama Lengkap Anda" required autocomplete="name">
         </label>
+
+        <label for="txtNama"><span>Tempat Lahir:</span>
+          <input type="text" id="txtTempatlahir" name="txtTempatlahir" placeholder="Tempat Lahir" required autocomplete="name">
+        </label>
+
+        <label for="txtNama"><span>Hobi:</span>
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Hobi anda" required autocomplete="name">
+        </label>
+
     </section>
 
     <section id="about">
