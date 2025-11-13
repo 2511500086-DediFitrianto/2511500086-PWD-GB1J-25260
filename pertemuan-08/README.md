@@ -11,4 +11,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Mengestrak file uts ke pertemuan 8</li>
   <li>Membuat section baru yaitu section biodata</li>
   <li>Membuat Judul Biodata Sederhana Mahasiswa</li>
+  <li>Membuat form di section biodata sederhana mahasiswa</li>
 </ol>

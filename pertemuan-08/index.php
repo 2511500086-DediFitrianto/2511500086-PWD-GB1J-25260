@@ -53,6 +53,11 @@ endif;
     </section>
     <section id = "biodata">
     <h2>Biodata Sederhana Mahasiswa</h2>
+        <form action="proses.php" method="POST">
+
+        <label for="txtNama"><span>NIM:</span>
+          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required autocomplete="name">
+        </label>
         </form>
     </section>
 
