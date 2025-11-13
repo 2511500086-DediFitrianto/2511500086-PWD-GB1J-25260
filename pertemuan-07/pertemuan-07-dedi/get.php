@@ -1,5 +1,3 @@
- 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -549,7 +547,7 @@
 
     <section id="contact">
         <h2>Kontak Saye</h2>
-        <form action="proses1.php" method="GET">
+        <form action="get_proses.php" method="GET">
             <label for="txtNama"><span>Nama:</span>
             <input type="text" id="txtNama" name="txtNama" placeholder="Your Name">
             </label>

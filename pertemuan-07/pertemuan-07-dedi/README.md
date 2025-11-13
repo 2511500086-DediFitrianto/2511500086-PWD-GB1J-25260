@@ -3,28 +3,10 @@
 NIM: 2511500086<br>
 Nama: DediFitrianto<br>
 
-Hari ini Kamis, 30 Oktober 2025 Saya mempelajari
+Hari ini Kamis, 13 November 2025 Saya mempelajari
 <ol>
-    <li>Script php hello world</li>
-    <li>Copy index.html, style.css, script.jss (pertemuan-06)</li>
-    <li>Membuat skrip php nim, nama</li>
-    <li>Membuat skrip php tempat lahir</li>
-    <li>Membuat skrip php tanggal lahir</li>
-    <li>Membuat skrip php hoby</li>
-    <li>Membuat skrip php pasangan</li>
-    <li>Membuat skrip php pekerjaan</li>
-    <li>Membuat skrip php nama ortu</li>
-    <li>Membuat skrip php nama kakak</li>
-    <li>Membuat skrip php nama adik</li>
-    <li>Membuat Section id IPK</li>
-    <li>Sebelum saya melanjutkan tugas, saya mengerjakan latihan</li>
-    <li>Membuat variabel Matkul</li>
-    <li>Membuat variabel nilai</li>
-    <li>Menambahkan perintah Lulus dan Gagal kalau semisalnya ipk lebih/kurang dari 1.00</li>
-    <li>Menambahkan variabel nilai bobot</li>
-    <li>Membuat H3 matkul 1</li>
-    <li>Mencopy H3 matkul 1 dan merubah isi dalamnya saja</li>
-    <li>Styling css section id IPK</li>
-    <li>Memisahkan tugas agar bapak yohanes mudah melihat hasilnya, hheheheheh</li>
-    <li>Menambahkan total bobot, total sks, dan IPK</li>
-</ol>
+    <li>mencopy dan menduplikat index.html</li>
+    <li>Membuat codingan php txtnama</li>
+    <li>Menambahkan form action</li>
+    <li>Mengganti reset menjadi submit di javascript</li>
+   
