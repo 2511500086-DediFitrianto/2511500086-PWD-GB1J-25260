@@ -125,7 +125,7 @@ header li a:active {
   box-sizing: border-box;
 }
 
-#bidata button,
+#biodata button,
 #contact button {
   margin-top: 10px;
   display: inline-block;
@@ -159,7 +159,7 @@ header li a:active {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-#biodata button[type="submit"]:hover
+#biodata button[type="reset"]:hover,
 #contact button[type="reset"]:hover {
   background-color: #cccccc;
   transform: translateY(-1px);
