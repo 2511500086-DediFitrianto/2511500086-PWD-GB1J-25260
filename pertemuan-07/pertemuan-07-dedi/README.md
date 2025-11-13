@@ -11,4 +11,5 @@ Hari ini Kamis, 13 November 2025 Saya mempelajari
     <li>Mengganti reset menjadi submit di javascript</li>
     <li>Membuat variabel form di get_proses.php</li>
     <li>Menambahkan session di getproses</li>
+    <li>Menampilkan session dari getproses ke get php</li>
    

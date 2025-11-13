@@ -1,3 +1,10 @@
+<?php
+session_start();
+    $sesnama = $_SESSION ["nama"];
+    $sesemail = $_SESSION ["email"];
+    $sespesan = $_SESSION ["pesan"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -564,6 +571,10 @@
             <button type="submit">Kirim &check;</button>
             <button type="reset">Batal &cross;</button>
         </form>
+        <h2>Terimakasih telah menghubungi kami</h2>
+        <p><strong>Nama:</strong> <?php echo $sesnama; ?></p>
+        <p><strong>Email:</strong> <?php echo $sesemail; ?></p>
+        <p><strong>Pesan:</strong> <?php echo $sespesan; ?></p>
     </section>
    </main>
    <footer>
