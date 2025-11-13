@@ -25,4 +25,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Menyambungkan sesion dan variabel ke index.php</li>
   <li>Menambahkan php di sectionabout</li>
   <li>Menambahkan kodingan eror, dan memberkan style.css, serta merubah sedikit di javacsript<li>
+  <li>Menghapus alert di javascript</li>
 </ol>
