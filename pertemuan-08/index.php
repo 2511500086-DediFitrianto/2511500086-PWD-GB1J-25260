@@ -59,18 +59,28 @@ endif;
           <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required autocomplete="name">
         </label>
 
-        <label for="txtNama"><span>Nama Lengkap:</span>
+        <label for="txtNamalengkap"><span>Nama Lengkap:</span>
           <input type="text" id="txtNamalengkap" name="txtNim" placeholder="Nama Lengkap Anda" required autocomplete="name">
         </label>
 
-        <label for="txtNama"><span>Tempat Lahir:</span>
+        <label for="txtTempatlahir"><span>Tempat Lahir:</span>
           <input type="text" id="txtTempatlahir" name="txtTempatlahir" placeholder="Tempat Lahir" required autocomplete="name">
         </label>
 
-        <label for="txtNama"><span>Hobi:</span>
+        <label for="txtHobi"><span>Hobi:</span>
           <input type="text" id="txtHobi" name="txtHobi" placeholder="Hobi anda" required autocomplete="name">
         </label>
 
+        <label for="txtPasangan"><span>Pasangan:</span>
+          <input type="text" id="txtpasangan" name="txtpasangan" placeholder="Siapa Pasangan anda?" required autocomplete="name">
+        </label>
+
+        <label for="txtPekerjaan"><span>Pekerjaan:</span>
+          <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Apa Pekerjaan anda?" required autocomplete="name">
+        </label>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
     </section>
 
     <section id="about">
