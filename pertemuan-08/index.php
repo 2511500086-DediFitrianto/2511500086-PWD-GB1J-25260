@@ -17,6 +17,10 @@ if (isset($_SESSION["sespesan"])):
 endif;
 ?>
 
+<?php
+$sesnim = $_SESSION["sesnim"] ?? "";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
