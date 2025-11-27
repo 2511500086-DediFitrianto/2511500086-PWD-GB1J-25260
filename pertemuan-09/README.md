@@ -15,4 +15,5 @@ associative $fieldConfig.</li>
 <li>Menambahkan fungsi bersihkan</li>
 <li>Menambahkan fungsi formatTanggal</li>
 <li>Menambahkan fungsi $conf dan $arr</li>
+<li>Menambahkan fungsi tampilkanbiodata</li>
 </ol>
