@@ -8,4 +8,5 @@ Hari ini Kamis, 6 November 2025 Saya mempelajari
 <li>estrak file bahan</li>
 <li>Modif baris kode (10-19) menjadi bentuk array associative</li>
 <li>Membuat SESSION biodata $arrbiodata</li>
+<li>Membuat fieldconfig yang berisi biodata dan suffix</li>
 </ol>
