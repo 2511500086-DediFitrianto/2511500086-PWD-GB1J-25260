@@ -14,4 +14,5 @@ associative $fieldConfig.</li>
 <li>membuat file baru fungsi.php</li>
 <li>Menambahkan fungsi bersihkan</li>
 <li>Menambahkan fungsi formatTanggal</li>
+<li>Menambahkan fungsi $conf dan $arr</li>
 </ol>
