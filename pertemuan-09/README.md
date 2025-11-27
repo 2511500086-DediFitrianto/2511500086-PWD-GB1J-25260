@@ -12,4 +12,5 @@ Hari ini Kamis, 25 November 2025 Saya mempelajari
 <li>Menambahkan foreach di section about untuk menampilkan isi array
 associative $fieldConfig.</li>
 <li>membuat file baru fungsi.php</li>
+<li>Menambahkan fungsi bersihkan</li>
 </ol>
