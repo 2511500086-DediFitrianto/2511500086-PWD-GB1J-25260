@@ -16,4 +16,5 @@ associative $fieldConfig.</li>
 <li>Menambahkan fungsi formatTanggal</li>
 <li>Menambahkan fungsi $conf dan $arr</li>
 <li>Menambahkan fungsi tampilkanbiodata</li>
+<li>Menyambungkan index.php ke fungsi.php menggunakan require_once</li>
 </ol>
