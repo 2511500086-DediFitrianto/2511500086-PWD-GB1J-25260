@@ -13,4 +13,5 @@ Hari ini Kamis, 25 November 2025 Saya mempelajari
 associative $fieldConfig.</li>
 <li>membuat file baru fungsi.php</li>
 <li>Menambahkan fungsi bersihkan</li>
+<li>Menambahkan fungsi formatTanggal</li>
 </ol>
