@@ -14,4 +14,5 @@ Hari ini Kamis, 04 Desember 2025 Saya mempelajari
 <li>Menambah file read.php dan menambahkan kodingan untuk menampilkan record</li>
 <li>Menambahkan data agar tbl_tamu ada isi recordnya</li>
 <li>Mencopy paste file read.php dan menggantinya menjadi read_inc.php serta modif kodingan nya</li>
+<li>Menambahkan <?php include 'read_inc.php'; di index.php</li>
 </ol>
