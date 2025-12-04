@@ -13,4 +13,5 @@ Hari ini Kamis, 04 Desember 2025 Saya mempelajari
 <li>Membuat tbl_tamu di SQL</li>
 <li>Menambah file read.php dan menambahkan kodingan untuk menampilkan record</li>
 <li>Menambahkan data agar tbl_tamu ada isi recordnya</li>
+<li>Mencopy paste file read.php dan menggantinya menjadi read_inc.php serta modif kodingan nya</li>
 </ol>
