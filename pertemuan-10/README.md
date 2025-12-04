@@ -10,4 +10,5 @@ Hari ini Kamis, 04 Desember 2025 Saya mempelajari
 <li>Menambahkan kodingan mysqli atau MySQL Improved di koneksi.php</li>
 <li>Mendownload, mengestrak file phpMyAdmin</li>
 <li>Menambahkan database db_pwd2025 di phpMyAdmin</li>
+<li>Membuat tbl_tamu di SQL</li>
 </ol>
