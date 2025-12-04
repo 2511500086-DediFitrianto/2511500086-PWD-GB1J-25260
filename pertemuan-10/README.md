@@ -11,4 +11,5 @@ Hari ini Kamis, 04 Desember 2025 Saya mempelajari
 <li>Mendownload, mengestrak file phpMyAdmin</li>
 <li>Menambahkan database db_pwd2025 di phpMyAdmin</li>
 <li>Membuat tbl_tamu di SQL</li>
+<li>Menambah file read.php dan menambahkan kodingan untuk menampilkan record</li>
 </ol>
