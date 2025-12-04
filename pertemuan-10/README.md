@@ -7,4 +7,5 @@ Hari ini Kamis, 04 Desember 2025 Saya mempelajari
 <ol>
 <li>Mengestrak file pertemuan 10</li>
 <li>Menambahkan file koneksi.php</li>
+<li>Menambahkan kodingan mysqli atau MySQL Improved di koneksi.php</li>
 </ol>
