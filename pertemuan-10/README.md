@@ -16,4 +16,5 @@ Hari ini Kamis, 04 Desember 2025 Saya mempelajari
 <li>Mencopy paste file read.php dan menggantinya menjadi read_inc.php serta modif kodingan nya</li>
 <li>Menambahkan <?php include 'read_inc.php'; di index.php</li>
 <li>Menghapus line 133-141 di file index.php</li>
+<li>export file localhost.sql</li>
 </ol>
