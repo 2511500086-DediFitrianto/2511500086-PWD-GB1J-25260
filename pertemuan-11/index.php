@@ -114,7 +114,7 @@ require_once __DIR__ . '/fungsi.php';
     $flash_error = $_SESSION['flash_error'] ?? '';
     $old = $_SESSION['old'] ?? [];
 
-    unset($_SESSION['flas_sukses'], $_SESSION['flash_eror'], $_SESSION['old']);
+    unset($_SESSION['flash_sukses'], $_SESSION['flash_error'], $_SESSION['old']);
     ?>
 
     <section id="contact">

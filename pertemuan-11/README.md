@@ -13,4 +13,5 @@ Hari ini Kamis, 11 Desember 2025 Saya mempelajari
 <li>Rewrite proses.php a</li>
 <li>Rewrite proses.php b dan c</li>
 <li>Rewrite kodingan proses.php menambahkan INSERT tbl_tamu dengan prepared statement mysqli dan simpan pesan sukses/gagal</li>
+<li>Memperbaiki sedikit typo di index.php</li>
 </ol>

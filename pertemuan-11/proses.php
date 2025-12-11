@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+ require_once __DIR__ . '/fungsi.php';
+ require 'koneksi.php';
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   $_SESSION['flash_error'] = 'Akses tidak valid';
   redirect_ke('index.php#contact');
@@ -46,11 +49,11 @@ if (!$stmt) {
 
 mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
 
-if (mysqli_stmt_execute($stmt)) {  
+if (mysqli_stmt_execute($stmt)) { 
     unset($_SESSION['old']);
     $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah tersimpan.';
-    redirect_ke('index.php#contact'); 
-} else {
+    redirect_ke('index.php#contact');
+} else { 
     $_SESSION['old'] = [
         'nama'  => $nama,
         'email' => $email,
