@@ -11,4 +11,5 @@ Hari ini Kamis, 11 Desember 2025 Saya mempelajari
 <li>Menambahkan kodingan tampilan flash message di section id contact</li>
 <li>Menambahkan kodingan untuk menampilkan nilai lama dari form</li>
 <li>Rewrite proses.php a</li>
+<li>Rewrite proses.php b dan c</li>
 </ol>
