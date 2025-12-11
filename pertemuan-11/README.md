@@ -8,5 +8,6 @@ Hari ini Kamis, 11 Desember 2025 Saya mempelajari
 <li>Menambahkan kodingan session contact di index.php</li>
 <li>Menambahkan kodingan untuk helper redirect di fungsi.php</li>
 <li>Menambahkan kodingan penangkap pesan sukses/gagal (flash message dari SESSION)</li>
-<li>Menambahkan kodinga tampilan flash message di section id contact</li>
+<li>Menambahkan kodingan tampilan flash message di section id contact</li>
+<li>Menambahkan kodingan untuk menampilkan nilai lama dari form</li>
 </ol>
