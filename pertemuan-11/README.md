@@ -17,4 +17,5 @@ Hari ini Kamis, 11 Desember 2025 Saya mempelajari
 <li>Menambahkan No,Aksi, dan created at di read.php</li>
 <li>Menambahkan dcreated_at di phpmyadmin</li>
 <li>Menambahkan validasi</li>
+<li>Kodingan sederhana captcha</li>
 </ol>
