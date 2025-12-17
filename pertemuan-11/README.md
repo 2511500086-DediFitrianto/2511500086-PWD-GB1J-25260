@@ -15,4 +15,6 @@ Hari ini Kamis, 11 Desember 2025 Saya mempelajari
 <li>Rewrite kodingan proses.php menambahkan INSERT tbl_tamu dengan prepared statement mysqli dan simpan pesan sukses/gagal</li>
 <li>Memperbaiki sedikit typo di index.php</li>
 <li>Menambahkan No,Aksi, dan created at di read.php</li>
+<li>Menambahkan dcreated_at di phpmyadmin</li>
+<li>Menambahkan validasi</li>
 </ol>
