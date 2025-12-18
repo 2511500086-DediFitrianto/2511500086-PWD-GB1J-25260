@@ -68,9 +68,16 @@ if (!empty($errors)) {
 $stmt = mysqli_prepare($conn, "UPDATE tbl_tamu
     SET cnama = ?, cemail = ?, cpesan = ?
     WHERE cid = ?");
-    
+
     if (!$stmt) {
         $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
         redirect_ke('edit.php?cid=' . (int)$cid);
+}
+
+mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $cid);
+
+if (mysqli_stmt_execute($stmt)) {
+    unset($_SESSION['old']);
+
 }
 ?>

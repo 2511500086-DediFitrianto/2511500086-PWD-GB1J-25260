@@ -16,4 +16,5 @@ Hari ini Kamis, 18 Desember 2025 Saya mempelajari
 <li>Menambahkan validasi eror sederhana mulai dari nama, email, pesan dan captcha</li>
 <li>Menambahkan simpan nilai dan pesan eror jika ada eror lalu redirect</li>
 <li>menyiapkan query UPDATE dengan prepared statement</li>
+<li>bind parameter dan eksekusi</li>
 </ol>
