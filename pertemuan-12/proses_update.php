@@ -12,4 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
 ]);
+
+if (!$cid) {
+    $_SESSION['flash_error'] = 'CID Tidak Valid.';
+}
+
+
 ?>
