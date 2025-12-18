@@ -54,4 +54,23 @@ if ($captcha != '242') {
     $errors[] = 'Jawaban ' . $captcha . ' captcha salah.';
 }
 
+if (!empty($errors)) {
+    $_SESSION['old'] = [
+        'nama'  => $nama,
+        'email' => $email,
+        'pesan' => $pesan
+    ];
+
+    $_SESSION['flash_error'] = implode('<br>', $errors);
+    redirect_ke('edit.php?cid=' . (int)$cid);
+}
+
+$stmt = mysqli_prepare($conn, "UPDATE tbl_tamu
+    SET cnama = ?, cemail = ?, cpesan = ?
+    WHERE cid = ?");
+    
+    if (!$stmt) {
+        $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
+        redirect_ke('edit.php?cid=' . (int)$cid);
+}
 ?>
