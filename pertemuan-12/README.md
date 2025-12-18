@@ -11,4 +11,5 @@ Hari ini Kamis, 18 Desember 2025 Saya mempelajari
 <li>menampilkan form dengan data lama yang dibaca berdasarkan cid (prefill form) di edit.php</li>
 <li>Membuat file proses update.php</li>
 <li>Membuat request method yang hanya di izinkan POST</li>
+<li>Menambahkan validasi cid wajib angka lebih dari 0</li>
 </ol>
