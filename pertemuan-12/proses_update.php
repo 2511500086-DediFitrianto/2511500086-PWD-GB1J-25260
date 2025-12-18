@@ -79,5 +79,20 @@ mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $cid);
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION['old']);
 
+    $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
+    redirect_ke('read.php');
+} else {
+    $_SESSION['old'] = [
+        'nama'  => $nama,
+        'email' => $email,
+        'pesan' => $pesan
+    ];
+
+    $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
+    redirect_ke('edit.php?cid=' . (int)$cid);
 }
+
+mysqli_stmt_close($stmt);
+
+redirect_ke('edit.php?cid=' . (int)$cid);
 ?>

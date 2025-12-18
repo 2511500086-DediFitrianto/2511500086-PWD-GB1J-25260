@@ -17,4 +17,5 @@ Hari ini Kamis, 18 Desember 2025 Saya mempelajari
 <li>Menambahkan simpan nilai dan pesan eror jika ada eror lalu redirect</li>
 <li>menyiapkan query UPDATE dengan prepared statement</li>
 <li>bind parameter dan eksekusi</li>
+<li>Menambahkan tutup statement</li>
 </ol>
