@@ -1,1 +1,9 @@
-# pertemuan-12
+# pertemuan-11
+
+NIM: 2511500086<br>
+Nama: DediFitrianto<br>
+
+Hari ini Kamis, 18 Desember 2025 Saya mempelajari
+<ol>
+<li>Menambahkan tombol edit di read.php kolom aksi</li>
+</ol>
