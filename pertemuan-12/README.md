@@ -13,4 +13,5 @@ Hari ini Kamis, 18 Desember 2025 Saya mempelajari
 <li>Membuat request method yang hanya di izinkan POST</li>
 <li>Menambahkan validasi cid wajib angka lebih dari 0</li>
 <li>Menambahkan sanitasi agar fungsi bisa menggambil dan membersihkan nilai dari form</li>
+<li>Menambahkan validasi eror sederhana mulai dari nama, email, pesan dan captcha</li>
 </ol>

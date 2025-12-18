@@ -152,7 +152,7 @@ require_once __DIR__ . '/fungsi.php';
           <small id="charCount">0/200 karakter</small>
         </label>
 
-        <label for="txtCaptcha"><span>Captcha 2 + 3 = ?</span>
+        <label for="txtCaptcha"><span>Captcha 22 x 11 = ?</span>
           <input type="number" id="txtCaptcha" name="txtCaptcha"
             placeholder="Jawab Pertanyaan..." required>
         </label>
