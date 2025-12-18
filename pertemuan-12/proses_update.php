@@ -17,5 +17,8 @@ if (!$cid) {
     $_SESSION['flash_error'] = 'CID Tidak Valid.';
 }
 
-
+$nama  = bersihkan($_POST['txtNama'] ?? '');
+$email = bersihkan($_POST['txtEmail'] ?? '');
+$pesan = bersihkan($_POST['txtPesan'] ?? '');
+$Captcha = bersihkan($_POST['$_txtCaptcha'] ?? '');
 ?>
