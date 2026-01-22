@@ -38,48 +38,87 @@ require_once __DIR__ . '/fungsi.php';
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
+    <?php
+    $flash_sukses1 = $_SESSION['flash_sukses1'] ?? ''; #jika query sukses
+    $flash_error1  = $_SESSION['flash_error1'] ?? ''; #jika ada error
+    $old1          = $_SESSION['old1'] ?? []; #untuk nilai lama form
+
+    unset($_SESSION['flash_sukses1'], $_SESSION['flash_error1'], $_SESSION['old1']); #bersihkan 3 session ini
+    ?>
+
     <section id="biodata">
-      <h2>Biodata Pengunjung</h2>
-      <form action="proses.php" method="POST">
+      <h2>Biodata Sederhana Mahasiswa</h2>
+            <?php if (!empty($flash_sukses1)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
+          <?= $flash_sukses1; ?>
+        </div>
+      <?php endif; ?>
 
-        <label for="txtKodePen"><span>Kode Pengunjung:</span>
-          <input type="text" id="txtKodePen" name="txtKodePen" placeholder="Masukkan Kode Pengunjung" required>
+      <?php if (!empty($flash_error1)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
+          <?= $flash_error1; ?>
+        </div>
+      <?php endif; ?>
+      <form action="proses_biodata.php" method="POST">
+        
+        <label for="txtNim"><span>NIM:</span>
+          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM"
+            required autocomplete="off"
+            value="<?= isset($old1['NIM']) ? htmlspecialchars($old1['NIM']) : '' ?>">
         </label>
-
-        <label for="txtNmPengunjung"><span>Nama Pengunjung:</span>
-          <input type="text" id="txtNmPengunjung" name="txtNmPengunjung" placeholder="Masukkan Nama Pengunjung" required>
+        
+        <label for="txtNmLengkap"><span>Nama Lengkap:</span>
+          <input type="text" id="txtNmLengkap" name="txtNmLengkap" placeholder="Masukkan Nama Lengkap"
+            required autocomplete="name"
+            value="<?= isset($old1['Nama_Lengkap']) ? htmlspecialchars($old1['Nama_Lengkap']) : '' ?>">
         </label>
-
-        <label for="txtAlRmh"><span>Alamat Rumah:</span>
-          <input type="text" id="txtAlRmh" name="txtAlRmh" placeholder="Masukkan Alamat Rumah" required>
+        
+        <label for="txtT4Lhr"><span>Tempat Lahir:</span>
+          <input type="text" id="txtT4Lhr" name="txtT4Lhr" placeholder="Masukkan Tempat Lahir"
+            required
+            value="<?= isset($old1['Tempat_Lahir']) ? htmlspecialchars($old1['Tempat_Lahir']) : '' ?>">
         </label>
-
-        <label for="txtTglKunjungan"><span>Tanggal Kunjungan:</span>
-          <input type="text" id="txtTglKunjungan" name="txtTglKunjungan" placeholder="Masukkan Tanggal Kunjungan" required>
+        
+        <label for="txtTglLhr"><span>Tanggal Lahir:</span>
+          <input type="text" id="txtTglLhr" name="txtTglLhr" placeholder="Masukkan Tanggal Lahir"
+            required
+            value="<?= isset($old1['Tanggal_Lahir']) ? htmlspecialchars($old1['Tanggal_Lahir']) : '' ?>">
         </label>
-
+        
         <label for="txtHobi"><span>Hobi:</span>
-          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" required>
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi"
+            required
+            value="<?= isset($old1['Hobi']) ? htmlspecialchars($old1['Hobi']) : '' ?>">
         </label>
-
-        <label for="txtAsalSMA"><span>Asal SLTA:</span>
-          <input type="text" id="txtAsalSMA" name="txtAsalSMA" placeholder="Masukkan Asal SLTA" required>
+        
+        <label for="txtPasangan"><span>Pasangan:</span>
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan"
+            required
+            value="<?= isset($old1['Pasangan']) ? htmlspecialchars($old1['Pasangan']) : '' ?>">
         </label>
-
+        
         <label for="txtKerja"><span>Pekerjaan:</span>
-          <input type="text" id="txtKerja" name="txtKerja" placeholder="Masukkan Pekerjaan" required>
+          <input type="text" id="txtKerja" name="txtKerja" placeholder="Masukkan Pekerjaan"
+            required
+            value="<?= isset($old1['Pekerjaan']) ? htmlspecialchars($old1['Pekerjaan']) : '' ?>">
         </label>
-
+        
         <label for="txtNmOrtu"><span>Nama Orang Tua:</span>
-          <input type="text" id="txtNmOrtu" name="txtNmOrtu" placeholder="Masukkan Nama Orang Tua" required>
+          <input type="text" id="txtNmOrtu" name="txtNmOrtu" placeholder="Masukkan Nama Orang Tua"
+            required
+            value="<?= isset($old1['Nama_Orang_Tua']) ? htmlspecialchars($old1['Nama_Orang_Tua']) : '' ?>">
         </label>
-
-        <label for="txtNmPacar"><span>Nama Pacar:</span>
-          <input type="text" id="txtNmPacar" name="txtNmPacar" placeholder="Masukkan Nama Pacar" required>
+        
+        <label for="txtNmKakak"><span>Nama Kakak:</span>
+          <input type="text" id="txtNmKakak" name="txtNmKakak" placeholder="Masukkan Nama Kakak"
+            required
+            value="<?= isset($old1['Nama_Kakak']) ? htmlspecialchars($old1['Nama_Kakak']) : '' ?>">
         </label>
-
-        <label for="txtNmMantan"><span>Nama Mantan:</span>
-          <input type="text" id="txtNmMantan" name="txtNmMantan" placeholder="Masukkan Nama Mantan" required>
+        
+        <label for="txtNmAdik"><span>Nama Adik:</span>
+          <input type="text" id="txtNmAdik" name="txtNmAdik" placeholder="Masukkan Nama Adik"
+            required
+            value="<?= isset($old1['Nama_Adik']) ? htmlspecialchars($old1['Nama_Adik']) : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>
@@ -91,16 +130,16 @@ require_once __DIR__ . '/fungsi.php';
     $biodata = $_SESSION["biodata"] ?? [];
 
     $fieldConfig = [
-      "kodepen" => ["label" => "Kode Pengunjung:", "suffix" => ""],
-      "nama" => ["label" => "Nama Pengunjung:", "suffix" => " &#128526;"],
-      "alamat" => ["label" => "Alamat Rumah:", "suffix" => ""],
-      "tanggal" => ["label" => "Tanggal Kunjungan:", "suffix" => ""],
-      "hobi" => ["label" => "Hobi:", "suffix" => " &#127926;"],
-      "slta" => ["label" => "Asal SLTA:", "suffix" => " &hearts;"],
-      "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
-      "ortu" => ["label" => "Nama Orang Tua:", "suffix" => ""],
-      "pacar" => ["label" => "Nama Pacar:", "suffix" => ""],
-      "mantan" => ["label" => "Nama Mantan:", "suffix" => ""],
+      "NIM" => ["label" => "NIM:", "suffix" => ""],
+      "Nama_Lengkap" => ["label" => "Nama_Lengkap:", "suffix" => " &#128526;"],
+      "Tempat_Lahir" => ["label" => "Tempat_Lahir:", "suffix" => ""],
+      "Tanggal_Lahir" => ["label" => "Tanggal_Lahir:", "suffix" => ""],
+      "Hobi" => ["label" => "Hobi:", "suffix" => " &#127926;"],
+      "Pasangan" => ["label" => "Pasangan:", "suffix" => " &hearts;"],
+      "Pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
+      "Nama_Orang_Tua" => ["label" => "Nama_Orang_Tua:", "suffix" => ""],
+      "Nama_Kakak" => ["label" => "Nama_Kakak:", "suffix" => ""],
+      "Nama_Adik" => ["label" => "Nama_Adik:", "suffix" => ""],
     ];
     ?>
 
@@ -159,7 +198,7 @@ require_once __DIR__ . '/fungsi.php';
         </label>
 
         <button type=" submit">Kirim</button>
-          <button type="reset">Batal</button>
+        <button type="reset">Batal</button>
       </form>
 
       <br>
