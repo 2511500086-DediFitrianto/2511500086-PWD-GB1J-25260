@@ -40,7 +40,7 @@ if (!empty($errors)) {
 }
 
 /* 5. QUERY UPDATE */
-$sql = "UPDATE tbl_biodata SET
+$sql = "UPDATE tbl_bm SET
   Nama_Lengkap   = ?,
   Tempat_Lahir   = ?,
   Tanggal_Lahir  = ?,

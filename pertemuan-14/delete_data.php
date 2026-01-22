@@ -14,7 +14,7 @@
         redirect_ke('read_biodata.php');
     }
 
-    $stmt = mysqli_prepare($conn, "DELETE FROM tbl_biodata WHERE NIM = ?");
+    $stmt = mysqli_prepare($conn, "DELETE FROM tbl_bm WHERE NIM = ?");
     mysqli_stmt_bind_param($stmt, "s", $NIM);
 
     if (mysqli_stmt_execute($stmt)) {

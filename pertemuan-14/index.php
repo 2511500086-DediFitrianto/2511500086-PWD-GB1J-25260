@@ -125,36 +125,68 @@ require_once __DIR__ . '/fungsi.php';
         <button type="reset">Batal</button>
       </form>
     </section>
-
+    
     <?php
-    $biodata = $_SESSION["biodata"] ?? [];
-
+    require_once 'koneksi.php';
+    
+    $sql = "SELECT * FROM tbl_bm ORDER BY NIM DESC LIMIT 1";
+    $q = mysqli_query($conn, $sql);
+    $biodata = mysqli_fetch_assoc($q) ?? [];
+    
     $fieldConfig = [
-      "NIM" => ["label" => "NIM:", "suffix" => ""],
-      "Nama_Lengkap" => ["label" => "Nama_Lengkap:", "suffix" => " &#128526;"],
-      "Tempat_Lahir" => ["label" => "Tempat_Lahir:", "suffix" => ""],
-      "Tanggal_Lahir" => ["label" => "Tanggal_Lahir:", "suffix" => ""],
-      "Hobi" => ["label" => "Hobi:", "suffix" => " &#127926;"],
-      "Pasangan" => ["label" => "Pasangan:", "suffix" => " &hearts;"],
-      "Pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
-      "Nama_Orang_Tua" => ["label" => "Nama_Orang_Tua:", "suffix" => ""],
-      "Nama_Kakak" => ["label" => "Nama_Kakak:", "suffix" => ""],
-      "Nama_Adik" => ["label" => "Nama_Adik:", "suffix" => ""],
+      "NIM" => [
+        "label" => "NIM:",
+        "suffix" => ""
+      ],
+      "Nama_Lengkap" => [
+        "label" => "Nama Lengkap:",
+        "suffix" => ""
+      ],
+      "Tempat_Lahir" => [
+        "label" => "Tempat Lahir:",
+        "suffix" => ""
+      ],
+      "Tanggal_Lahir" => [
+        "label" => "Tanggal Lahir:",
+        "suffix" => ""
+      ],
+      "Hobi" => [
+        "label" => "Hobi:",
+        "suffix" => " 🎵"
+      ],
+      "Pasangan" => [
+        "label" => "Pasangan:",
+        "suffix" => ""
+      ],
+      "Pekerjaan" => [
+        "label" => "Pekerjaan:",
+        "suffix" => ""
+      ],
+      "Nama_Orang_Tua" => [
+        "label" => "Nama Orang Tua:",
+        "suffix" => ""
+      ],
+      "Nama_Kakak" => [
+        "label" => "Nama Kakak:",
+        "suffix" => ""
+      ],
+      "Nama_Adik" => [
+        "label" => "Nama Adik:",
+        "suffix" => ""
+      ],
     ];
     ?>
-
+    
     <section id="about">
       <h2>Tentang Saya</h2>
-      <?= tampilkanBiodata($fieldConfig, $biodata) ?>
+    
+      <?php if (!empty($biodata)): ?>
+        <?= tampilkanBiodata($fieldConfig, $biodata); ?>
+      <?php else: ?>
+        <p><em>Belum ada data biodata.</em></p>
+      <?php endif; ?>
     </section>
 
-    <?php
-    $flash_sukses = $_SESSION['flash_sukses'] ?? ''; #jika query sukses
-    $flash_error  = $_SESSION['flash_error'] ?? ''; #jika ada error
-    $old          = $_SESSION['old'] ?? []; #untuk nilai lama form
-
-    unset($_SESSION['flash_sukses'], $_SESSION['flash_error'], $_SESSION['old']); #bersihkan 3 session ini
-    ?>
 
     <section id="contact">
       <h2>Kontak Kami</h2>

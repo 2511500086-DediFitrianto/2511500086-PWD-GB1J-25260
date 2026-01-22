@@ -1,56 +1,69 @@
 <?php
-  session_start();
-  require 'koneksi.php';
-  require 'fungsi.php';
+session_start();
 
-  /* 1. VALIDASI INPUT NIM 
-    Menggunakan filter_input untuk keamanan. 
-    NIM biasanya string, jadi kita gunakan FILTER_SANITIZE_SPECIAL_CHARS.
-  */
-  $NIM = filter_input(INPUT_GET, 'NIM', FILTER_SANITIZE_SPECIAL_CHARS);
+require __DIR__ . '/koneksi.php';
+require __DIR__ . '/fungsi.php';
 
-  if (!$NIM) {
-    $_SESSION['flash_error1'] = 'Akses tidak valid. NIM tidak ditemukan.';
-    redirect_ke('read_biodata.php');
-  }
+$NIM = filter_input(INPUT_GET, 'NIM', FILTER_SANITIZE_SPECIAL_CHARS);
 
-  /* 2. AMBIL DATA DARI DATABASE (PREPARED STATEMENT)
-  */
-  $stmt = mysqli_prepare($conn, "SELECT * FROM tbl_biodata WHERE NIM = ? LIMIT 1");
-  if (!$stmt) {
-    $_SESSION['flash_error1'] = 'Kesalahan sistem pada query.';
-    redirect_ke('read_biodata.php');
-  }
+if (!$NIM) {
+  $_SESSION['flash_error1'] = 'Akses tidak valid. NIM tidak ditemukan.';
+  redirect_ke('read_biodata.php');
+  exit;
+}
 
-  mysqli_stmt_bind_param($stmt, "s", $NIM);
-  mysqli_stmt_execute($stmt);
-  $res = mysqli_stmt_get_result($stmt);
-  $data = mysqli_fetch_assoc($res);
-  mysqli_stmt_close($stmt);
+$sql = "SELECT 
+  Nama_Lengkap, Tempat_Lahir, Tanggal_Lahir, Hobi, Pasangan, 
+  Pekerjaan, Nama_Orang_Tua, Nama_Kakak, Nama_Adik
+FROM tbl_bm WHERE NIM = ? LIMIT 1";
 
-  if (!$data) {
-    $_SESSION['flash_error1'] = 'Data mahasiswa tidak ditemukan.';
-    redirect_ke('read_biodata.php');
-  }
+$stmt = mysqli_prepare($conn, $sql);
 
-  /* 3. PENANGANAN PRE-FILL (Isi otomatis form)
-    Mengambil data dari DB atau dari input lama (old input) jika ada error saat submit.
-  */
-  $flash_error1 = $_SESSION['flash_error1'] ?? '';
-  $old1 = $_SESSION['old1'] ?? [];
-  unset($_SESSION['flash_error1'], $_SESSION['old1']);
+if (!$stmt) {
+  $_SESSION['flash_error1'] = 'Kesalahan sistem (prepare): ' . mysqli_error($conn);
+  redirect_ke('read_biodata.php');
+  exit;
+}
 
-  // Logika: Jika ada input lama (setelah gagal submit), pakai itu. Jika tidak, pakai data DB.
-  $Nama_Lengkap    = $old1['Nama_Lengkap'] ?? $data['Nama_Lengkap'];
-  $Tempat_Lahir    = $old1['Tempat_Lahir'] ?? $data['Tempat_Lahir'];
-  $Tanggal_Lahir   = $old1['Tanggal_Lahir'] ?? $data['Tanggal_Lahir'];
-  $Hobi            = $old1['Hobi'] ?? $data['Hobi'];
-  $Pasangan        = $old1['Pasangan'] ?? $data['Pasangan'];
-  $Pekerjaan       = $old1['Pekerjaan'] ?? $data['Pekerjaan'];
-  $Nama_Orang_Tua  = $old1['Nama_Orang_Tua'] ?? $data['Nama_Orang_Tua'];
-  $Nama_Kakak      = $old1['Nama_Kakak'] ?? $data['Nama_Kakak'];
-  $Nama_Adik       = $old1['Nama_Adik'] ?? $data['Nama_Adik'];
+mysqli_stmt_bind_param($stmt, "s", $NIM);
+mysqli_stmt_execute($stmt);
+
+mysqli_stmt_bind_result(
+  $stmt,
+  $Nama_Lengkap,
+  $Tempat_Lahir,
+  $Tanggal_Lahir,
+  $Hobi,
+  $Pasangan,
+  $Pekerjaan,
+  $Nama_Orang_Tua,
+  $Nama_Kakak,
+  $Nama_Adik
+);
+
+if (!mysqli_stmt_fetch($stmt)) {
+  $_SESSION['flash_error1'] = 'Data mahasiswa tidak ditemukan.';
+  redirect_ke('read_biodata.php');
+  exit;
+}
+
+mysqli_stmt_close($stmt);
+
+$flash_error1 = $_SESSION['flash_error1'] ?? '';
+$old1 = $_SESSION['old1'] ?? [];
+unset($_SESSION['flash_error1'], $_SESSION['old1']);
+
+$Nama_Lengkap   = $old1['Nama_Lengkap'] ?? $Nama_Lengkap;
+$Tempat_Lahir   = $old1['Tempat_Lahir'] ?? $Tempat_Lahir;
+$Tanggal_Lahir  = $old1['Tanggal_Lahir'] ?? $Tanggal_Lahir;
+$Hobi           = $old1['Hobi'] ?? $Hobi;
+$Pasangan       = $old1['Pasangan'] ?? $Pasangan;
+$Pekerjaan      = $old1['Pekerjaan'] ?? $Pekerjaan;
+$Nama_Orang_Tua = $old1['Nama_Orang_Tua'] ?? $Nama_Orang_Tua;
+$Nama_Kakak     = $old1['Nama_Kakak'] ?? $Nama_Kakak;
+$Nama_Adik      = $old1['Nama_Adik'] ?? $Nama_Adik;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">
