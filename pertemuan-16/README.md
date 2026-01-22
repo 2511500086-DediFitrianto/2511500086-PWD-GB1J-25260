@@ -15,4 +15,5 @@ Hari ini Kamis, 22 Januari 2026 Saya mempelajari
 <li>Membuat file read biodata</li>
 <li>Mencopy kodingan di pertemuan 14 dan merubahnya</li>
 <li>Membuat file edit biodata</li>
+<li>Mencopy kodingan di pertemuan 14 dan merubahnya file edit biodata</li>
 </ol>
