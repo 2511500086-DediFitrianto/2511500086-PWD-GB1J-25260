@@ -12,4 +12,7 @@ Hari ini Kamis, 22 Januari 2026 Saya mempelajari
 <li>Menambahkan validasi</li>
 <li>Menambahkan kodingan insert dan flash sukses serta error di proses biodata</li>
 <li>Memperbaiki kodingan yang eror</li>
+<li>Membuat file read biodata</li>
+<li></li>
+<li></li>
 </ol>
