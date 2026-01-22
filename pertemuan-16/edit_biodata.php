@@ -1,157 +1,141 @@
 <?php
-  session_start();
-  require 'koneksi.php';
-  require 'fungsi.php';
+session_start();
+require 'koneksi.php';
+require 'fungsi.php';
 
-  /* 1. VALIDASI INPUT NIM 
-    Menggunakan filter_input untuk keamanan. 
-    NIM biasanya string, jadi kita gunakan FILTER_SANITIZE_SPECIAL_CHARS.
-  */
-  $NIM = filter_input(INPUT_GET, 'NIM', FILTER_SANITIZE_SPECIAL_CHARS);
+/* 1. VALIDASI INPUT KodePen */
+$KodePen = filter_input(INPUT_GET, 'KodePen', FILTER_SANITIZE_SPECIAL_CHARS);
 
-  if (!$NIM) {
-    $_SESSION['flash_error1'] = 'Akses tidak valid. NIM tidak ditemukan.';
-    redirect_ke('read_biodata.php');
-  }
+if (!$KodePen) {
+  $_SESSION['flash_error1'] = 'Akses tidak valid. Kode tidak ditemukan.';
+  redirect_ke('read_biodata.php');
+}
 
-  /* 2. AMBIL DATA DARI DATABASE (PREPARED STATEMENT)
-  */
-  $stmt = mysqli_prepare($conn, "SELECT * FROM tbl_biodata WHERE NIM = ? LIMIT 1");
-  if (!$stmt) {
-    $_SESSION['flash_error1'] = 'Kesalahan sistem pada query.';
-    redirect_ke('read_biodata.php');
-  }
+/* 2. AMBIL DATA DARI DATABASE */
+$stmt = mysqli_prepare($conn, "SELECT * FROM tbl_biodata WHERE KodePen = ? LIMIT 1");
+if (!$stmt) {
+  $_SESSION['flash_error1'] = 'Kesalahan sistem pada query.';
+  redirect_ke('read_biodata.php');
+}
 
-  mysqli_stmt_bind_param($stmt, "s", $NIM);
-  mysqli_stmt_execute($stmt);
-  $res = mysqli_stmt_get_result($stmt);
-  $data = mysqli_fetch_assoc($res);
-  mysqli_stmt_close($stmt);
+mysqli_stmt_bind_param($stmt, "s", $KodePen);
+mysqli_stmt_execute($stmt);
+$res  = mysqli_stmt_get_result($stmt);
+$data = mysqli_fetch_assoc($res);
+mysqli_stmt_close($stmt);
 
-  if (!$data) {
-    $_SESSION['flash_error1'] = 'Data mahasiswa tidak ditemukan.';
-    redirect_ke('read_biodata.php');
-  }
+if (!$data) {
+  $_SESSION['flash_error1'] = 'Data pengunjung tidak ditemukan.';
+  redirect_ke('read_biodata.php');
+}
 
-  /* 3. PENANGANAN PRE-FILL (Isi otomatis form)
-    Mengambil data dari DB atau dari input lama (old input) jika ada error saat submit.
-  */
-  $flash_error1 = $_SESSION['flash_error1'] ?? '';
-  $old1 = $_SESSION['old1'] ?? [];
-  unset($_SESSION['flash_error1'], $_SESSION['old1']);
+/* 3. PRE-FILL FORM */
+$flash_error1 = $_SESSION['flash_error1'] ?? '';
+$old1 = $_SESSION['old1'] ?? [];
+unset($_SESSION['flash_error1'], $_SESSION['old1']);
 
-  // Logika: Jika ada input lama (setelah gagal submit), pakai itu. Jika tidak, pakai data DB.
-  $Nama_Lengkap    = $old1['Nama_Lengkap'] ?? $data['Nama_Lengkap'];
-  $Tempat_Lahir    = $old1['Tempat_Lahir'] ?? $data['Tempat_Lahir'];
-  $Tanggal_Lahir   = $old1['Tanggal_Lahir'] ?? $data['Tanggal_Lahir'];
-  $Hobi            = $old1['Hobi'] ?? $data['Hobi'];
-  $Pasangan        = $old1['Pasangan'] ?? $data['Pasangan'];
-  $Pekerjaan       = $old1['Pekerjaan'] ?? $data['Pekerjaan'];
-  $Nama_Orang_Tua  = $old1['Nama_Orang_Tua'] ?? $data['Nama_Orang_Tua'];
-  $Nama_Kakak      = $old1['Nama_Kakak'] ?? $data['Nama_Kakak'];
-  $Nama_Adik       = $old1['Nama_Adik'] ?? $data['Nama_Adik'];
+$NmPengunjung   = $old1['NmPengunjung']   ?? $data['NmPengunjung'];
+$AlRmh          = $old1['AlRmh']          ?? $data['AlRmh'];
+$TglKunjungan   = $old1['TglKunjungan']   ?? $data['TglKunjungan'];
+$Hobi           = $old1['Hobi']           ?? $data['Hobi'];
+$AlS            = $old1['AlS']            ?? $data['AlS'];
+$Pekerjaan      = $old1['Pekerjaan']      ?? $data['Pekerjaan'];
+$Nama_Orang_Tua = $old1['Nama_Orang_Tua'] ?? $data['Nama_Orang_Tua'];
+$Nama_Pacar     = $old1['Nama_Pacar']     ?? $data['Nama_Pacar'];
+$Mntn           = $old1['Mntn']           ?? $data['Mntn'];
 ?>
 
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Biodata Mahasiswa</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Edit Biodata Pengunjung</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-      <h1>Sistem Akademik</h1>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
-      <nav>
-        <ul>
-          <li><a href="read_biodata.php">Data Mahasiswa</a></li>
-          <li><a href="#">Beranda</a></li>
-        </ul>
-      </nav>
-    </header>
+<header>
+  <h1>Manajemen Biodata</h1>
+</header>
 
-    <main>
-      <section id="biodata">
-        <h2>Edit Biodata Mahasiswa</h2>
+<main>
+<section id="biodata">
+  <h2>Edit Biodata Pengunjung</h2>
 
-        <?php if (!empty($flash_error1)): ?>
-          <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px; border: 1px solid #f5c6cb;">
-            <?= htmlspecialchars($flash_error1); ?>
-          </div>
-        <?php endif; ?>
-        
-        <form action="update_biodata.php" method="POST">
-        
-          <label>
-            <span>NIM:</span>
-            <input type="text" value="<?= htmlspecialchars($NIM); ?>" disabled>
-            <input type="hidden" name="NIM" value="<?= htmlspecialchars($NIM); ?>">
-          </label>
-        
-          <label>
-            <span>Nama Lengkap:</span>
-            <input type="text" name="Nama_Lengkap" required
-              value="<?= htmlspecialchars($Nama_Lengkap); ?>">
-          </label>
-        
-          <label>
-            <span>Tempat Lahir:</span>
-            <input type="text" name="Tempat_Lahir" required
-              value="<?= htmlspecialchars($Tempat_Lahir); ?>">
-          </label>
-        
-          <label>
-            <span>Tanggal Lahir:</span>
-            <input type="date" name="Tanggal_Lahir" required
-              value="<?= htmlspecialchars($Tanggal_Lahir); ?>">
-          </label>
-        
-          <label>
-            <span>Hobi:</span>
-            <input type="text" name="Hobi"
-              value="<?= htmlspecialchars($Hobi); ?>">
-          </label>
-        
-          <label>
-            <span>Pasangan:</span>
-            <input type="text" name="Pasangan"
-              value="<?= htmlspecialchars($Pasangan); ?>">
-          </label>
-        
-          <label>
-            <span>Pekerjaan:</span>
-            <input type="text" name="Pekerjaan"
-              value="<?= htmlspecialchars($Pekerjaan); ?>">
-          </label>
-        
-          <label>
-            <span>Nama Orang Tua:</span>
-            <input type="text" name="Nama_Orang_Tua"
-              value="<?= htmlspecialchars($Nama_Orang_Tua); ?>">
-          </label>
-        
-          <label>
-            <span>Nama Kakak:</span>
-            <input type="text" name="Nama_Kakak"
-              value="<?= htmlspecialchars($Nama_Kakak); ?>">
-          </label>
-        
-          <label>
-            <span>Nama Adik:</span>
-            <input type="text" name="Nama_Adik"
-              value="<?= htmlspecialchars($Nama_Adik); ?>">
-          </label>
-        
-          <button type="submit">Update</button>
-            <button type="reset">Reset</button>
-            <a href="read_biodata.php" class="btn-back" style="text-decoration: none; padding: 10px; background: #eee; border-radius: 4px; color: #333;">Batal</a>
+  <?php if ($flash_error1): ?>
+    <div style="padding:10px; background:#f8d7da; color:#721c24; margin-bottom:10px;">
+      <?= htmlspecialchars($flash_error1) ?>
+    </div>
+  <?php endif; ?>
 
-        </form>
-      </section>
-    </main>
+  <form action="update_biodata.php" method="POST">
 
-    <script src="script.js"></script>
+    <label>
+      <span>Kode Pengunjung:</span>
+      <input type="text" value="<?= htmlspecialchars($KodePen) ?>" disabled>
+      <input type="hidden" name="KodePen" value="<?= htmlspecialchars($KodePen) ?>">
+    </label>
+
+    <label>
+      <span>Nama Pengunjung:</span>
+      <input type="text" name="NmPengunjung" required
+        value="<?= htmlspecialchars($NmPengunjung) ?>">
+    </label>
+
+    <label>
+      <span>Alamat Rumah:</span>
+      <input type="text" name="AlRmh" required
+        value="<?= htmlspecialchars($AlRmh) ?>">
+    </label>
+
+    <label>
+      <span>Tanggal Kunjungan:</span>
+      <input type="date" name="TglKunjungan" required
+        value="<?= htmlspecialchars($TglKunjungan) ?>">
+    </label>
+
+    <label>
+      <span>Hobi:</span>
+      <input type="text" name="Hobi"
+        value="<?= htmlspecialchars($Hobi) ?>">
+    </label>
+
+    <label>
+      <span>Asal SLTA:</span>
+      <input type="text" name="AlS"
+        value="<?= htmlspecialchars($AlS) ?>">
+    </label>
+
+    <label>
+      <span>Pekerjaan:</span>
+      <input type="text" name="Pekerjaan"
+        value="<?= htmlspecialchars($Pekerjaan) ?>">
+    </label>
+
+    <label>
+      <span>Nama Orang Tua:</span>
+      <input type="text" name="Nama_Orang_Tua"
+        value="<?= htmlspecialchars($Nama_Orang_Tua) ?>">
+    </label>
+
+    <label>
+      <span>Nama Pacar:</span>
+      <input type="text" name="Nama_Pacar"
+        value="<?= htmlspecialchars($Nama_Pacar) ?>">
+    </label>
+
+    <label>
+      <span>Nama Mantan:</span>
+      <input type="text" name="Mntn"
+        value="<?= htmlspecialchars($Mntn) ?>">
+    </label>
+
+    <button type="submit">Update</button>
+    <a href="read_biodata.php" style="padding:8px; background:#eee; text-decoration:none;">Batal</a>
+
+  </form>
+</section>
+</main>
+
 </body>
 </html>
