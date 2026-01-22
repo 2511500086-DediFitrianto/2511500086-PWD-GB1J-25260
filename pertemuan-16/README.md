@@ -10,6 +10,6 @@ Hari ini Kamis, 22 Januari 2026 Saya mempelajari
 <li>Menyambungungkan index ke proses</li>
 <li>Menambahkan kodingan ambil & bersihkan input</li>
 <li>Menambahkan validasi</li>
-<li>Menambahkan kodingan konfirmasi di bagian delete</li>
+<li>Menambahkan kodingan insert dan flash sukses serta error di proses biodata</li>
 <li>Memperbaiki kodingan yang eror</li>
 </ol>

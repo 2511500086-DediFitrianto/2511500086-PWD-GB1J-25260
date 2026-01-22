@@ -45,7 +45,6 @@ if (!empty($errors1)) {
   redirect_ke('index.php#biodata');
 }
 
-/* insert data */
 $sql = "INSERT INTO tbl_biodata 
 (KodePen, NmPengunjung, AlRmh, TglKunjungan, Hobi, AlS, Pekerjaan, Nama_Orang_Tua, Nama_Pacar, Mntn)
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
