@@ -106,7 +106,7 @@
     $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
     redirect_ke('edit.php?cid='. (int)$cid);
   }
-  #tutup statement
+
   mysqli_stmt_close($stmt);
 
   redirect_ke('edit.php?cid='. (int)$cid);
